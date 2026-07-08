@@ -10,6 +10,21 @@ export default function Nosotras() {
     { title: "Innovación", icon: <Lightbulb />, desc: "Enfoque biológico y estético para resultados superiores." }
   ];
 
+  const timelineBio = [
+    { title: "Instituto Politécnico Nacional", desc: "Egresada en Estomatología" },
+    { title: "Universidad Autónoma de Tlaxcala", desc: "Diplomado en Ozonoterapia Orofacial" },
+    { title: "Colegio Mexicano de Ginecología", desc: "Diplomado de Terapia Hormonal y Ozonoterapia" },
+    { title: "ISII México", desc: "Diplomado en Ortopedia Maxilar" },
+    { title: "Dr. Cura", desc: "Cursando Odontología Biológica" }
+  ];
+
+  const timelineNatural = [
+    { title: "Especialista en Ortodoncia", desc: "y Ortopedia Maxilar" },
+    { title: "Experiencia Clínica", desc: "Diseñando sonrisas hermosas y funcionales" },
+    { title: "Tecnología de Vanguardia", desc: "Diagnóstico y corrección maxilar" },
+    { title: "Trato Humano", desc: "Enfoque cálido y centrado en el paciente" }
+  ];
+
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -52,9 +67,27 @@ export default function Nosotras() {
               </div>
               <h2 className="text-3xl font-serif font-bold text-[#93A785] mb-2">Lic. en Estomatología</h2>
               <p className="text-sm uppercase tracking-widest opacity-60 mb-6">Bio in Dent</p>
-              <p className="opacity-80 leading-relaxed text-right">
+              
+              <p className="opacity-80 leading-relaxed text-right mb-8">
                 Con una visión holística y biológica, su enfoque se centra en tratar la causa raíz de los problemas dentales, utilizando ozonoterapia y materiales 100% biocompatibles para proteger la salud sistémica del paciente.
               </p>
+
+              <div className="relative border-r-2 border-[#93A785]/30 pr-6 space-y-4 text-right w-full">
+                {timelineBio.map((item, index) => (
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 + (index * 0.1) }}
+                    className="relative"
+                  >
+                    <div className="absolute w-3 h-3 bg-[#93A785] rounded-full -right-[29px] top-1.5"></div>
+                    <h3 className="font-bold text-sm md:text-base text-[var(--color-text)]">{item.title}</h3>
+                    <p className="text-[var(--color-text)]/70 text-xs md:text-sm">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
 
             {/* Natural Dental Side */}
@@ -69,13 +102,32 @@ export default function Nosotras() {
                 <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain" />
               </div>
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-4 border-[#62C8C1]/20 shadow-lg group-hover:shadow-xl transition-shadow">
-                <img src="/images/lore.jpeg" alt="Dra. Lorena Arellano" className="w-full h-full object-cover" />
+                <img src="/images/lore.jpeg" alt="C.D.E.O Lorena Arellano Rosales" className="w-full h-full object-cover" />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-[#62C8C1] mb-2">Dra. Lorena Arellano</h2>
-              <p className="text-sm uppercase tracking-widest opacity-60 mb-6">Natural Dental</p>
-              <p className="opacity-80 leading-relaxed">
+              <h2 className="text-3xl font-serif font-bold text-[#62C8C1] mb-1">C.D.E.O Lorena Arellano Rosales</h2>
+              <p className="text-sm font-medium text-[#1A3A3A] mb-2">Cirujano Dentista Especialista en Ortodoncia</p>
+              <p className="text-xs uppercase tracking-widest opacity-60 mb-6">Natural Dental</p>
+
+              <p className="opacity-80 leading-relaxed text-left mb-8">
                 Especialista en ortodoncia y ortopedia maxilar, su pasión es diseñar sonrisas funcionales y estéticamente perfectas, guiando el desarrollo facial y corrigiendo alteraciones con la tecnología más avanzada.
               </p>
+              
+              <div className="relative border-l-2 border-[#62C8C1]/30 pl-6 space-y-4 text-left w-full">
+                {timelineNatural.map((item, index) => (
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 + (index * 0.1) }}
+                    className="relative"
+                  >
+                    <div className="absolute w-3 h-3 bg-[#62C8C1] rounded-full -left-[29px] top-1.5"></div>
+                    <h3 className="font-bold text-sm md:text-base text-[var(--color-text)]">{item.title}</h3>
+                    <p className="text-[var(--color-text)]/70 text-xs md:text-sm">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
 
           </div>

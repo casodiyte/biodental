@@ -39,10 +39,10 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-4 z-50 group">
-          <div className="flex gap-4 items-center">
-            <img src="/logos/natural-logo.png" alt="Natural Dental" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
-            <img src="/logos/bio-logo.png" alt="Bio in Dent" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+        <Link to="/" className="flex items-center gap-2 md:gap-4 z-50 group shrink-0">
+          <div className="flex gap-2 md:gap-4 items-center">
+            <img src="/logos/natural-logo.png" alt="Natural Dental" className="h-7 md:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+            <img src="/logos/bio-logo.png" alt="Bio in Dent" className="h-7 md:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
           </div>
         </Link>
 
@@ -77,11 +77,11 @@ export default function Navbar() {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Nav */}
+        {/* Mobile Nav Dropdown */}
         <div
           className={cn(
-            'fixed inset-0 bg-[var(--color-bg)] flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out md:hidden',
-            isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+            'absolute top-full left-0 w-full bg-white shadow-xl flex flex-col transition-all duration-300 ease-in-out origin-top md:hidden',
+            isMobileMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'
           )}
         >
           {navLinks.map((link) => (
@@ -90,8 +90,8 @@ export default function Navbar() {
               to={link.path}
               onClick={() => setIsMobileMenuOpen(false)}
               className={cn(
-                'text-2xl font-serif transition-colors',
-                location.pathname === link.path ? 'text-[var(--color-primary)]' : 'text-[var(--color-text)]'
+                'px-6 py-4 text-sm uppercase tracking-wider font-semibold border-b border-gray-100 last:border-none transition-colors',
+                location.pathname === link.path ? 'text-[#62C8C1] bg-gray-50' : 'text-[#2D4A3E] hover:bg-gray-50'
               )}
             >
               {link.name}

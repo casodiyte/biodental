@@ -1,23 +1,29 @@
 import { motion } from 'framer-motion';
-import { Leaf, Droplet, Activity, Heart, ShieldPlus } from 'lucide-react';
+import { Leaf, Droplet, Activity, Heart, ShieldPlus, FileHeart, Sparkles, Stethoscope, Scissors, Smile, Baby } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 import WaveDivider from '../components/ui/WaveDivider';
 import ServiceCard from '../components/ui/ServiceCard';
 
 export default function BioInDent() {
-  const timeline = [
-    { title: "Instituto Politécnico Nacional", desc: "Egresada en Estomatología" },
-    { title: "Universidad Autónoma de Tlaxcala", desc: "Diplomado en Ozonoterapia Orofacial (con ALDO)" },
-    { title: "Colegio Mexicano de Ginecología, Láser y Funcional", desc: "Diplomado de Terapia Hormonal y Ozonoterapia (en curso)" },
-    { title: "ISII México", desc: "Diplomado en Ortopedia Maxilar" },
-    { title: "Dr. Cura", desc: "Cursando Odontología Biológica" }
-  ];
+  const philosophy = "Con una visión holística y biológica, nuestro enfoque se centra en tratar la causa raíz de los problemas dentales, utilizando ozonoterapia y materiales 100% biocompatibles para proteger la salud sistémica del paciente.";
 
   const services = [
     { title: "Odontología Biológica", icon: <Leaf />, desc: "Tratamientos libres de metales, respetando la biología y salud general del cuerpo." },
     { title: "Ozonoterapia Dental", icon: <Droplet />, desc: "Uso de ozono médico para desinfección profunda, cicatrización y estimulación del sistema inmune local." },
-    { title: "Remoción Segura de Amalgamas", icon: <ShieldPlus />, desc: "Protocolo especializado para retirar empastes de metal minimizando la exposición a toxinas." },
-    { title: "Terapia Neural y Funcional", icon: <Activity />, desc: "Abordaje integral para tratar dolores crónicos y focos de interferencia bucales." }
+    { title: "Examen Epigenético", icon: <FileHeart />, desc: "Evaluación para personalizar tratamientos basados en tu respuesta celular." },
+    { title: "Odontología General y Estética", icon: <Sparkles />, desc: "Cuidado integral, restaurador y embellecimiento de tu sonrisa." },
+    { title: "Disfunción de ATM", icon: <Activity />, desc: "Diagnóstico y tratamiento para la articulación temporomandibular." },
+    { title: "Remoción Segura de Amalgamas", icon: <ShieldPlus />, desc: "Protocolo especializado para retirar empastes de metal minimizando la exposición a toxinas." }
+  ];
+
+  const specialtyServices = [
+    { title: "Endodoncia", icon: <Stethoscope />, desc: "Tratamiento de conductos para salvar tus dientes naturales." },
+    { title: "Cirugía Bucal y Maxilofacial", icon: <Scissors />, desc: "Procedimientos quirúrgicos seguros y especializados." },
+    { title: "Implantes Dentales", icon: <ShieldPlus />, desc: "Opciones biocompatibles para reemplazar piezas faltantes." },
+    { title: "Prótesis Fija y Removible", icon: <Smile />, desc: "Restauración funcional y estética de tu sonrisa." },
+    { title: "Ortodoncia Convencional", icon: <Activity />, desc: "Tratamiento con brackets para alinear tus dientes." },
+    { title: "Invisalign (Alineadores)", icon: <Sparkles />, desc: "Ortodoncia invisible para mayor comodidad." },
+    { title: "Atención Especial a Niños", icon: <Baby />, desc: "Cuidado dental pediátrico con calidez y paciencia." }
   ];
 
   return (
@@ -39,39 +45,23 @@ export default function BioInDent() {
             </p>
           </motion.div>
 
-          {/* Doctor Card */}
+          {/* Brand Card */}
           <motion.div 
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="bg-[var(--color-surface)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-start gap-12 shadow-sm border border-[var(--color-primary)]/20"
+            className="bg-[var(--color-surface)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-sm border border-[var(--color-primary)]/20"
           >
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-[var(--color-bg)] shrink-0 overflow-hidden relative shadow-inner border-4 border-[var(--color-primary)]/30 mx-auto md:mx-0">
-              <div className="absolute inset-0 flex items-center justify-center text-[var(--color-text)]/20 font-serif italic">
-                Foto Placeholder
-              </div>
+            <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 flex items-center justify-center p-4">
+               <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="w-full h-full object-contain drop-shadow-md" />
             </div>
             
-            <div className="flex-grow w-full">
-              <h2 className="text-3xl font-serif font-bold mb-2">Licenciada en Estomatología</h2>
-              <p className="text-[var(--color-primary)] font-medium mb-8 uppercase tracking-wider text-sm">Formación Académica Integral</p>
+            <div className="flex-grow w-full text-center md:text-left">
+              <h2 className="text-3xl font-serif font-bold mb-2">Filosofía Bio in Dent</h2>
+              <p className="text-[var(--color-primary)] font-medium mb-6 uppercase tracking-wider text-sm">Odontología Biológica</p>
               
-              {/* Timeline */}
-              <div className="relative border-l-2 border-[var(--color-primary)]/30 ml-3 md:ml-0 space-y-6">
-                {timeline.map((item, index) => (
-                  <motion.div 
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + (index * 0.1) }}
-                    className="relative pl-6"
-                  >
-                    <div className="absolute w-3 h-3 bg-[var(--color-primary)] rounded-full -left-[7px] top-2"></div>
-                    <h3 className="font-bold text-[var(--color-text)]">{item.title}</h3>
-                    <p className="text-[var(--color-text)]/70 text-sm mt-1">{item.desc}</p>
-                  </motion.div>
-                ))}
+              <div className="relative border-l-2 border-[var(--color-primary)]/30 ml-3 md:ml-0 pl-6 text-[var(--color-text)]/80 leading-relaxed text-lg italic font-light">
+                "{philosophy}"
               </div>
             </div>
           </motion.div>
@@ -94,6 +84,17 @@ export default function BioInDent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((s, i) => (
+              <ServiceCard key={i} title={s.title} description={s.desc} icon={s.icon} delay={i * 0.1} />
+            ))}
+          </div>
+
+          <div className="text-center mt-24 mb-12">
+            <h2 className="text-3xl font-serif font-bold mb-4">Servicios por Especialista</h2>
+            <div className="w-12 h-1 bg-[var(--color-primary)] mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {specialtyServices.map((s, i) => (
               <ServiceCard key={i} title={s.title} description={s.desc} icon={s.icon} delay={i * 0.1} />
             ))}
           </div>

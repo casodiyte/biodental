@@ -9,21 +9,21 @@ export default function Home() {
 
   return (
     <PageTransition className="relative min-h-screen">
-      {/* Split Hero Section */}
-      <section className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden pt-20 md:pt-0">
+      {/* Desktop Split Hero Section (Hidden on mobile) */}
+      <section className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0">
         
         {/* Top Center Content (Headline) */}
-        <div className="absolute top-28 left-0 right-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+        <div className="absolute top-20 md:top-28 left-0 right-0 flex flex-col items-center justify-center z-20 pointer-events-none">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-center px-4"
           >
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white drop-shadow-lg mb-2">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] mb-2">
               Tu sonrisa, nuestra pasión
             </h1>
-            <p className="text-white drop-shadow-md text-sm md:text-lg font-medium">
+            <p className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] text-xs md:text-lg font-medium">
               Dos especialistas, un mismo compromiso con tu salud dental
             </p>
           </motion.div>
@@ -38,11 +38,11 @@ export default function Home() {
             <ChevronDown size={32} />
           </motion.div>
 
-        {/* Left Side: Bio in Dent (Sage Green) */}
+        {/* Left Side: Bio in Dent (Green) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-[#93A785]"
           animate={{
-            width: window.innerWidth < 768 ? '100%' : hoveredSide === 'left' ? '55%' : hoveredSide === 'right' ? '45%' : '50%'
+            width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '45%' : hoveredSide === 'left' ? '55%' : '50%'
           }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           onMouseEnter={() => setHoveredSide('left')}
@@ -52,14 +52,14 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
           <div className="z-10 text-center flex flex-col items-center mt-12 md:mt-0 md:mr-24 transition-transform duration-500 group-hover:scale-105">
-            <div className="h-32 md:h-40 mb-6 drop-shadow-lg">
+            <div className="h-20 md:h-40 mb-3 md:mb-6 drop-shadow-lg">
               <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-full w-auto object-contain" />
             </div>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5F2EC] mb-2 drop-shadow-md">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#F5F2EC] mb-1 md:mb-2 drop-shadow-md">
               Bio in Dent
             </h2>
-            <p className="text-[#EDE4D4] font-medium text-lg mb-1">Lic. en Estomatología</p>
-            <p className="text-[#F5F2EC]/80 text-sm mb-6 max-w-xs">Odontología Biológica y Ozonoterapia</p>
+            <p className="text-[#EDE4D4] font-medium text-sm md:text-lg mb-0.5 md:mb-1">Lic. en Estomatología</p>
+            <p className="text-[#F5F2EC]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Odontología Biológica y Ozonoterapia</p>
             
             <Link to="/bio-in-dent" className="inline-flex items-center gap-2 bg-[#F5F2EC] text-[#2D4A3E] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
@@ -69,14 +69,13 @@ export default function Home() {
 
         {/* Right Side: Natural Dental (Teal) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-gradient-to-b from-white via-[#E6F7F6] to-[#62C8C1]"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '55%' : hoveredSide === 'left' ? '45%' : '50%'
           }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           onMouseEnter={() => setHoveredSide('right')}
           onMouseLeave={() => setHoveredSide(null)}
-          style={{ backgroundColor: '#62C8C1' }}
         >
           {/* Organic SVG Divider for Desktop */}
           <div className="hidden md:block absolute top-0 -left-1 w-24 h-full text-[#93A785]">
@@ -88,15 +87,15 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
           <div className="z-10 text-center flex flex-col items-center mt-12 md:mt-0 md:ml-24 transition-transform duration-500 group-hover:scale-105">
-            <div className="h-32 md:h-40 mb-8 relative flex justify-center items-center">
-              <div className="absolute -translate-y-6 w-32 h-32 md:w-40 md:h-40 bg-white/80 blur-2xl rounded-full z-0"></div>
+            <div className="h-20 md:h-40 mb-3 md:mb-8 relative flex justify-center items-center">
+              <div className="absolute -translate-y-4 md:-translate-y-6 w-24 h-24 md:w-40 md:h-40 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
             </div>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F0FAFA] mb-2 drop-shadow-md">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#1A3A3A] mb-1 md:mb-2">
               Natural Dental
             </h2>
-            <p className="text-[#E6F7F6] font-medium text-lg mb-1">Dra. Lorena Arellano Rosales</p>
-            <p className="text-[#F0FAFA]/80 text-sm mb-6 max-w-xs">Ortodoncia y Ortopedia Maxilar</p>
+            <p className="text-[#2D4A3E] font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
+            <p className="text-[#1A3A3A]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Cirujano Dentista Especialista en Ortodoncia</p>
             
             <Link to="/natural-dental" className="inline-flex items-center gap-2 bg-[#F0FAFA] text-[#1A3A3A] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
@@ -105,7 +104,53 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Services Preview Section */}
+      {/* Mobile Unified Hero Section */}
+      <section className="md:hidden relative w-full min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-12 px-4 overflow-hidden bg-gradient-to-br from-[#93A785] to-[#62C8C1]">
+        
+        {/* Top Text */}
+        <div className="relative z-20 text-center mb-8 mt-4">
+           <h1 className="text-3xl font-serif font-bold text-white drop-shadow-md mb-3 leading-tight">
+             Tu sonrisa,<br/>nuestra pasión
+           </h1>
+           <p className="text-white/95 drop-shadow-sm text-xs font-medium px-4">
+             Dos especialistas, un mismo compromiso con tu salud dental
+           </p>
+        </div>
+
+        {/* Logos Side by Side - EXACTLY Equal Hierarchy */}
+        <div className="relative z-20 w-full max-w-sm mx-auto bg-white/95 backdrop-blur-md rounded-[2rem] p-5 border border-white/50 shadow-2xl flex flex-col gap-6">
+           <div className="flex flex-row items-stretch justify-center gap-4">
+              
+              {/* Bio in Dent */}
+              <div className="flex-1 flex flex-col items-center text-center">
+                 <div className="h-16 mb-4 flex items-center justify-center w-full">
+                    <img src="/logos/bio-logo.png" alt="Bio in Dent" className="max-h-full max-w-[90%] object-contain" />
+                 </div>
+                 <h2 className="text-[13px] font-serif font-bold text-[#93A785] mb-1">Bio in Dent</h2>
+                 <p className="text-[9px] text-gray-500 leading-tight mb-4 flex-grow">Odontología Biológica y Ozonoterapia</p>
+                 <Link to="/bio-in-dent" className="bg-[#93A785] hover:bg-[#7b8e6f] text-white px-2 py-2.5 rounded-full text-[10px] uppercase tracking-wider font-bold w-full transition-colors shadow-sm flex items-center justify-center gap-1">
+                   Descubrir <ArrowRight size={10} />
+                 </Link>
+              </div>
+              
+              {/* Divider */}
+              <div className="w-px bg-gray-200 my-2 rounded-full"></div>
+              
+              {/* Natural Dental */}
+              <div className="flex-1 flex flex-col items-center text-center">
+                 <div className="h-16 mb-4 flex items-center justify-center w-full">
+                    <img src="/logos/natural-logo.png" alt="Natural Dental" className="max-h-full max-w-[90%] object-contain" />
+                 </div>
+                 <h2 className="text-[13px] font-serif font-bold text-[#62C8C1] mb-1">Natural Dental</h2>
+                 <p className="text-[9px] text-gray-500 leading-tight mb-4 flex-grow">Ortodoncia y Ortopedia Maxilar</p>
+                 <Link to="/natural-dental" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-2 py-2.5 rounded-full text-[10px] uppercase tracking-wider font-bold w-full transition-colors shadow-sm flex items-center justify-center gap-1">
+                   Descubrir <ArrowRight size={10} />
+                 </Link>
+              </div>
+
+           </div>
+        </div>
+      </section>      {/* Services Preview Section */}
       <section className="py-24 px-4 md:px-8 bg-white relative">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">

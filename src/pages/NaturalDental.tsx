@@ -5,6 +5,7 @@ import WaveDivider from '../components/ui/WaveDivider';
 import ServiceCard from '../components/ui/ServiceCard';
 
 export default function NaturalDental() {
+  const philosophy = "Nuestra pasión es diseñar sonrisas funcionales y estéticamente perfectas, guiando el desarrollo facial y corrigiendo alteraciones con la tecnología más avanzada, siempre brindando un trato cálido y humano.";
   const services = [
     { title: "Odontología general y estética", icon: <Sparkles />, desc: "Tratamientos restaurativos con materiales bio-compatibles y de alta estética." },
     { title: "Ortodoncia convencional", icon: <Smile />, desc: "Corrección de la posición dental utilizando brackets tradicionales y estéticos." },
@@ -40,25 +41,25 @@ export default function NaturalDental() {
             </p>
           </motion.div>
 
-          {/* Doctor Card */}
+          {/* Brand Card */}
           <motion.div 
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="bg-[var(--color-surface)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-sm border border-[var(--color-primary)]/20"
           >
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-[var(--color-bg)] shrink-0 overflow-hidden relative shadow-inner border-4 border-[var(--color-primary)]/30">
-              <div className="absolute inset-0 flex items-center justify-center text-[var(--color-text)]/20 font-serif italic">
-                Foto Placeholder
-              </div>
+            <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 flex items-center justify-center p-4">
+               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="w-full h-full object-contain drop-shadow-md" />
             </div>
             
-            <div>
-              <h2 className="text-3xl font-serif font-bold mb-2">Dra. Lorena Arellano Rosales</h2>
-              <p className="text-[var(--color-primary)] font-medium mb-6 uppercase tracking-wider text-sm">Cirujano Dentista — Especialista</p>
-              <p className="text-[var(--color-text)]/80 leading-relaxed mb-6">
-                Con años de experiencia creando sonrisas hermosas y funcionales. Mi enfoque se centra en la estética dental y la corrección maxilar, utilizando tecnología de vanguardia y un trato cálido y humano.
-              </p>
+            <div className="flex-grow w-full text-center md:text-left">
+              <h2 className="text-3xl font-serif font-bold mb-2">Filosofía Natural Dental</h2>
+              <p className="text-[var(--color-primary)] font-medium mb-6 uppercase tracking-wider text-sm">Ortodoncia y Ortopedia Maxilar</p>
+              
+              <div className="relative border-l-2 border-[var(--color-primary)]/30 ml-3 md:ml-0 pl-6 text-[var(--color-text)]/80 leading-relaxed text-lg italic font-light mb-8">
+                "{philosophy}"
+              </div>
+              
               <a href="/contacto" className="inline-flex bg-[var(--color-primary)] text-[var(--color-bg)] px-8 py-3 rounded-full font-medium hover:brightness-110 transition-all shadow-md hover:shadow-lg">
                 Agendar valoración
               </a>

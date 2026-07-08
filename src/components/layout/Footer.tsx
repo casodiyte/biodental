@@ -11,11 +11,11 @@ export default function Footer() {
           
           {/* Brands */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-2xl font-bold">
-              <span className="text-[var(--color-bg)]">Natural Dental</span>
-              <br />
-              <span className="text-[var(--color-primary)]">Bio in Dent</span>
-            </h3>
+            <div className="flex flex-row items-center gap-6 w-fit mb-2">
+              <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-10 md:h-12 w-auto object-contain brightness-0 invert opacity-90" />
+              <div className="w-px h-8 bg-[var(--color-bg)]/30"></div>
+              <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-10 md:h-12 w-auto object-contain brightness-0 invert opacity-90" />
+            </div>
             <p className="text-sm opacity-80 font-light mt-2 max-w-xs">
               Dos especialistas, un mismo compromiso con tu salud dental. Odontología integral con enfoque humano y profesional.
             </p>

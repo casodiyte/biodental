@@ -66,8 +66,8 @@ export default function Contacto() {
                      <div className="h-24 mb-4">
                         <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain" />
                       </div>
-                      <h2 className="text-2xl font-serif font-bold text-[#1A3A3A]">Dra. Lorena Arellano Rosales</h2>
-                      <p className="text-[#62C8C1] font-medium uppercase tracking-wider text-xs mt-1">Ortodoncia y Ortopedia</p>
+                      <h2 className="text-2xl font-serif font-bold text-[#1A3A3A]">C.D.E.O Lorena Arellano Rosales</h2>
+                      <p className="text-[#62C8C1] font-medium uppercase tracking-wider text-xs mt-1">Cirujano Dentista Especialista en Ortodoncia</p>
                   </div>
                   <div className="md:w-1/2 p-8 flex flex-col justify-center gap-6">
                     <a href="tel:5523413894" className="flex items-center gap-4 text-gray-700 hover:text-[#62C8C1] transition-colors group">
