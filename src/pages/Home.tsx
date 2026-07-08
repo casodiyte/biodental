@@ -95,7 +95,7 @@ export default function Home() {
               Natural Dental
             </h2>
             <p className="text-[#2D4A3E] font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
-            <p className="text-[#1A3A3A]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Cirujano Dentista Especialista en Ortodoncia</p>
+            <p className="text-[#1A3A3A]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Odontología Integral</p>
             
             <Link to="/natural-dental" className="inline-flex items-center gap-2 bg-[#F0FAFA] text-[#1A3A3A] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
@@ -142,7 +142,7 @@ export default function Home() {
                     <img src="/logos/natural-logo.png" alt="Natural Dental" className="max-h-full max-w-[90%] object-contain" />
                  </div>
                  <h2 className="text-[13px] font-serif font-bold text-[#62C8C1] mb-1">Natural Dental</h2>
-                 <p className="text-[9px] text-gray-500 leading-tight mb-4 flex-grow">Ortodoncia y Ortopedia Maxilar</p>
+                 <p className="text-[9px] text-gray-500 leading-tight mb-4 flex-grow">Odontología Integral</p>
                  <Link to="/natural-dental" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-2 py-2.5 rounded-full text-[10px] uppercase tracking-wider font-bold w-full transition-colors shadow-sm flex items-center justify-center gap-1">
                    Descubrir <ArrowRight size={10} />
                  </Link>
