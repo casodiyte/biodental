@@ -65,8 +65,9 @@ export default function Nosotras() {
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-4 border-[#93A785]/20 shadow-lg group-hover:shadow-xl transition-shadow">
                 <img src="/images/clau.jpeg" alt="Lic. Claudia" className="w-full h-full object-cover" />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-[#93A785] mb-2">Lic. en Estomatología</h2>
-              <p className="text-sm uppercase tracking-widest opacity-60 mb-6">Bio in Dent</p>
+              <h2 className="text-3xl font-serif font-bold text-[#93A785] mb-1">Lic. Claudia Ríos Pérez</h2>
+              <p className="text-sm font-medium text-[#2D4A3E] mb-2">Licenciada en Estomatología</p>
+              <p className="text-xs uppercase tracking-widest opacity-60 mb-6">Bio in Dent</p>
               
               <p className="opacity-80 leading-relaxed text-right mb-8">
                 Con una visión holística y biológica, su enfoque se centra en tratar la causa raíz de los problemas dentales, utilizando ozonoterapia y materiales 100% biocompatibles para proteger la salud sistémica del paciente.

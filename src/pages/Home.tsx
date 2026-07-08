@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 
 export default function Home() {
@@ -212,6 +212,73 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-24 px-4 md:px-8 bg-[#F5F2EC]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#2D4A3E] mb-6">¿Por qué elegirnos?</h2>
+            <div className="w-24 h-1 bg-[#93A785] mx-auto rounded-full mb-6"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-3xl shadow-sm text-center flex flex-col items-center hover:shadow-md transition-shadow"
+            >
+              <div className="w-16 h-16 bg-[#93A785]/10 rounded-full flex items-center justify-center text-[#93A785] mb-6">
+                <Microscope size={32} />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-[#2D4A3E] mb-3">Tecnología Avanzada</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Contamos con equipos de última generación para diagnósticos precisos y tratamientos mínimamente invasivos.</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white p-8 rounded-3xl shadow-sm text-center flex flex-col items-center hover:shadow-md transition-shadow"
+            >
+              <div className="w-16 h-16 bg-[#62C8C1]/10 rounded-full flex items-center justify-center text-[#62C8C1] mb-6">
+                <HeartHandshake size={32} />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-[#1A3A3A] mb-3">Trato Humano</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Entendemos tus miedos. Ofrecemos una experiencia relajante, libre de dolor y centrada absolutamente en tu comodidad.</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white p-8 rounded-3xl shadow-sm text-center flex flex-col items-center hover:shadow-md transition-shadow"
+            >
+              <div className="w-16 h-16 bg-[#93A785]/10 rounded-full flex items-center justify-center text-[#93A785] mb-6">
+                <Shield size={32} />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-[#2D4A3E] mb-3">Materiales Seguros</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Utilizamos exclusivamente materiales libres de metales que son 100% seguros y compatibles con la biología de tu organismo.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-4 md:px-8 relative overflow-hidden bg-[#2D4A3E]">
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#93A785] to-transparent"></div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Transforma tu sonrisa hoy</h2>
+          <p className="text-[#EDE4D4] text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+            Agenda tu cita de valoración y descubre cómo nuestro enfoque biológico y estético puede mejorar no solo tu sonrisa, sino tu calidad de vida.
+          </p>
+          <Link to="/contacto" className="inline-flex items-center gap-2 bg-white text-[#2D4A3E] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F5F2EC] hover:scale-105 transition-all shadow-xl">
+            Agendar mi cita <ArrowRight size={20} />
+          </Link>
         </div>
       </section>
     </PageTransition>
