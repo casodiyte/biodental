@@ -1,5 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Cal, { getCalApi } from "@calcom/embed-react";
+
+function CalEmbed({ calLink, brandColor }: { calLink: string, brandColor: string }) {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: brandColor } },
+        hideEventTypeDetails: false,
+        layout: "month_view"
+      });
+    })();
+  }, [brandColor]);
+
+  return (
+    <div className="w-full h-[600px] rounded-2xl overflow-hidden bg-white relative">
+      <Cal
+        calLink={calLink}
+        style={{ width: "100%", height: "100%", overflow: "scroll" }}
+        config={{ layout: "month_view", theme: "light" }}
+      />
+    </div>
+  );
+}
 import { MapPin, Phone, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 
@@ -147,6 +172,136 @@ export default function Contacto() {
                 </motion.div>
               )}
             </AnimatePresence>
+          </div>
+
+          {/* Agenda tu Cita Section */}
+          <div className="mt-32 text-center pb-12">
+            <svg className="w-full h-12 mb-8 text-[#93A785]/20" preserveAspectRatio="none" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M0,50 Q25,0 50,50 T100,50 L100,100 L0,100 Z" />
+            </svg>
+            <motion.h2 
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-5xl font-serif font-bold text-[#2D4A3E] mb-10"
+            >
+              Agenda tu cita en línea
+            </motion.h2>
+            
+            <div className="flex justify-center mb-10">
+              <div className="bg-white p-2 rounded-full shadow-md flex relative overflow-hidden">
+                <div 
+                  className="absolute top-2 bottom-2 w-[calc(50%-8px)] rounded-full transition-all duration-500 ease-out z-0"
+                  style={{ 
+                    left: activeTab === 'natural' ? '8px' : 'calc(50% + 4px)',
+                    backgroundColor: activeTab === 'natural' ? '#62C8C1' : '#93A785'
+                  }}
+                />
+                <button 
+                  onClick={() => setActiveTab('natural')}
+                  className={`relative z-10 px-6 md:px-12 py-3 rounded-full font-serif font-bold text-sm md:text-base transition-colors duration-300 ${activeTab === 'natural' ? 'text-white' : 'text-gray-500 hover:text-gray-800'}`}
+                >
+                  Natural Dental
+                </button>
+                <button 
+                  onClick={() => setActiveTab('bio')}
+                  className={`relative z-10 px-6 md:px-12 py-3 rounded-full font-serif font-bold text-sm md:text-base transition-colors duration-300 ${activeTab === 'bio' ? 'text-white' : 'text-gray-500 hover:text-gray-800'}`}
+                >
+                  Bio in Dent
+                </button>
+              </div>
+            </div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl border-2 transition-colors duration-500"
+              style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : 'rgba(147,167,133,0.3)' }}
+            >
+              {activeTab === 'natural' ? (
+                <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" />
+              ) : (
+                <CalEmbed calLink="BIO-IN-DENT-USERNAME" brandColor="#93A785" />
+              )}
+            </motion.div>
+          </div>
+
+          {/* Maps Section */}
+          <div className="mt-20 mb-10 text-center pb-12">
+            <motion.h2 
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-5xl font-serif font-bold text-[#2D4A3E] mb-12"
+            >
+              Encuéntranos
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
+              {/* Natural Dental Map */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="bg-white px-8 py-3 rounded-t-2xl shadow-sm border-b-2 border-[#62C8C1] w-3/4 -mb-2 relative z-10">
+                  <h3 className="font-serif font-bold text-[#1A3A3A]">Natural Dental</h3>
+                </div>
+                <div className="w-full rounded-2xl overflow-hidden shadow-lg border-2 border-[#62C8C1]/50 bg-gray-100">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=Natural+Dental+CDMX&hl=es&z=15&output=embed" 
+                    width="100%" 
+                    height="350" 
+                    style={{ border: 0, borderRadius: '16px' }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <a 
+                  href="https://share.google/TNmsyMLrpkYFiQTiq" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="mt-6 px-8 py-3 rounded-full bg-[#62C8C1] text-white font-bold hover:bg-[#50b2ab] transition-all shadow-md flex items-center gap-2"
+                >
+                  <MapPin size={18} /> Cómo llegar
+                </a>
+              </motion.div>
+
+              {/* Bio in Dent Map */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex flex-col items-center"
+              >
+                <div className="bg-white px-8 py-3 rounded-t-2xl shadow-sm border-b-2 border-[#93A785] w-3/4 -mb-2 relative z-10">
+                  <h3 className="font-serif font-bold text-[#2D4A3E]">Bio in Dent</h3>
+                </div>
+                <div className="w-full rounded-2xl overflow-hidden shadow-lg border-2 border-[#93A785]/50 bg-gray-100">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=Bio+in+Dent+CDMX&hl=es&z=15&output=embed" 
+                    width="100%" 
+                    height="350" 
+                    style={{ border: 0, borderRadius: '16px' }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <a 
+                  href="https://share.google/plj02tekOxHwOlc63" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="mt-6 px-8 py-3 rounded-full bg-[#93A785] text-white font-bold hover:bg-[#7b8e6f] transition-all shadow-md flex items-center gap-2"
+                >
+                  <MapPin size={18} /> Cómo llegar
+                </a>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
