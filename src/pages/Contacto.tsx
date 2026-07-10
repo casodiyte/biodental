@@ -220,9 +220,9 @@ export default function Contacto() {
               style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : 'rgba(147,167,133,0.3)' }}
             >
               {activeTab === 'natural' ? (
-                <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" />
+                <CalEmbed key="cal-natural" calLink="lnatural-dental" brandColor="#62C8C1" />
               ) : (
-                <CalEmbed calLink="bioindent" brandColor="#93A785" />
+                <CalEmbed key="cal-bio" calLink="bioindent" brandColor="#93A785" />
               )}
             </motion.div>
           </div>
