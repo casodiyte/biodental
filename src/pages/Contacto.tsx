@@ -222,7 +222,7 @@ export default function Contacto() {
               {activeTab === 'natural' ? (
                 <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" />
               ) : (
-                <CalEmbed calLink="BIO-IN-DENT-USERNAME" brandColor="#93A785" />
+                <CalEmbed calLink="bioindent" brandColor="#93A785" />
               )}
             </motion.div>
           </div>
