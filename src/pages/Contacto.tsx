@@ -251,7 +251,7 @@ export default function Contacto() {
                 </div>
                 <div className="w-full rounded-2xl overflow-hidden shadow-lg border-2 border-[#62C8C1]/50 bg-gray-100">
                   <iframe 
-                    src="https://maps.google.com/maps?q=Natural+Dental,+C.+Guillermo+Prieto+89,+San+Rafael,+CDMX&hl=es&z=15&output=embed" 
+                    src="https://maps.google.com/maps?q=C.+Guillermo+Prieto+89,+San+Rafael,+06470,+CDMX&hl=es&z=15&output=embed" 
                     width="100%" 
                     height="350" 
                     style={{ border: 0, borderRadius: '16px' }} 
