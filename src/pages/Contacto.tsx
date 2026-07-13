@@ -227,11 +227,17 @@ export default function Contacto() {
               className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl border-2 transition-colors duration-500"
               style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : 'rgba(147,167,133,0.3)' }}
             >
-              <div style={{ display: activeTab === 'natural' ? 'block' : 'none' }}>
-                <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" isActive={activeTab === 'natural'} />
-              </div>
-              <div style={{ display: activeTab === 'bio' ? 'block' : 'none' }}>
-                <CalEmbed calLink="bioindent" brandColor="#93A785" isActive={activeTab === 'bio'} />
+              <div className="relative w-full" style={{ minHeight: '600px' }}>
+                <div 
+                  className={`absolute top-0 left-0 w-full transition-opacity duration-300 ${activeTab === 'natural' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+                >
+                  <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" isActive={activeTab === 'natural'} />
+                </div>
+                <div 
+                  className={`absolute top-0 left-0 w-full transition-opacity duration-300 ${activeTab === 'bio' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+                >
+                  <CalEmbed calLink="bioindent" brandColor="#93A785" isActive={activeTab === 'bio'} />
+                </div>
               </div>
             </motion.div>
           </div>
