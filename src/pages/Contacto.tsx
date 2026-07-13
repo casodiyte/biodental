@@ -1,35 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Cal, { getCalApi } from "@calcom/embed-react";
 
-function CalEmbed({ calLink, brandColor, isActive }: { calLink: string, brandColor: string, isActive: boolean }) {
-  useEffect(() => {
-    if (!isActive) return;
-    (async function () {
-      try {
-        const cal = await getCalApi();
-        cal("ui", {
-          theme: "light",
-          cssVarsPerTheme: { 
-            light: { 'cal-brand': brandColor },
-            dark: { 'cal-brand': brandColor }
-          },
-          hideEventTypeDetails: false,
-          layout: "month_view"
-        });
-      } catch (error) {
-        console.warn("Cal UI config error:", error);
-      }
-    })();
-  }, [brandColor, isActive]);
-
+function CalEmbed({ calLink }: { calLink: string }) {
   return (
     <div className="w-full h-[600px] rounded-2xl overflow-hidden bg-white relative">
-      <Cal
-        calLink={calLink}
-        style={{ width: "100%", height: "100%", overflow: "scroll" }}
-        config={{ layout: "month_view", theme: "light" }}
-      />
+      <iframe
+        src={`https://cal.com/${calLink}?embed=true&theme=light`}
+        style={{ width: "100%", height: "100%", border: "none" }}
+        title="Agendar Cita"
+      ></iframe>
     </div>
   );
 }
@@ -227,18 +206,11 @@ export default function Contacto() {
               className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl border-2 transition-colors duration-500"
               style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : 'rgba(147,167,133,0.3)' }}
             >
-              <div className="relative w-full" style={{ minHeight: '600px' }}>
-                <div 
-                  className={`absolute top-0 left-0 w-full transition-opacity duration-300 ${activeTab === 'natural' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
-                >
-                  <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" isActive={activeTab === 'natural'} />
-                </div>
-                <div 
-                  className={`absolute top-0 left-0 w-full transition-opacity duration-300 ${activeTab === 'bio' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
-                >
-                  <CalEmbed calLink="bioindent" brandColor="#93A785" isActive={activeTab === 'bio'} />
-                </div>
-              </div>
+              {activeTab === 'natural' ? (
+                <CalEmbed calLink="lnatural-dental" />
+              ) : (
+                <CalEmbed calLink="bioindent" />
+              )}
             </motion.div>
           </div>
 
