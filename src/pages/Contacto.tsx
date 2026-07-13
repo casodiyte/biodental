@@ -113,7 +113,7 @@ export default function Contacto() {
                         <p className="font-semibold text-lg">Enviar mensaje</p>
                       </div>
                     </a>
-                    <a href="https://share.google/TNmsyMLrpkYFiQTiq" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 hover:text-[#62C8C1] transition-colors group">
+                    <a href="https://share.google/6XlqKpo0DJA3aVtxD" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 hover:text-[#62C8C1] transition-colors group">
                       <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#62C8C1]/20 transition-colors">
                         <MapPin size={20} />
                       </div>
@@ -251,7 +251,7 @@ export default function Contacto() {
                 </div>
                 <div className="w-full rounded-2xl overflow-hidden shadow-lg border-2 border-[#62C8C1]/50 bg-gray-100">
                   <iframe 
-                    src="https://maps.google.com/maps?q=Natural+Dental+CDMX&hl=es&z=15&output=embed" 
+                    src="https://maps.google.com/maps?q=Natural+Dental,+C.+Guillermo+Prieto+89,+San+Rafael,+CDMX&hl=es&z=15&output=embed" 
                     width="100%" 
                     height="350" 
                     style={{ border: 0, borderRadius: '16px' }} 
@@ -261,7 +261,7 @@ export default function Contacto() {
                   ></iframe>
                 </div>
                 <a 
-                  href="https://share.google/TNmsyMLrpkYFiQTiq" 
+                  href="https://share.google/6XlqKpo0DJA3aVtxD" 
                   target="_blank" 
                   rel="noreferrer"
                   className="mt-6 px-8 py-3 rounded-full bg-[#62C8C1] text-white font-bold hover:bg-[#50b2ab] transition-all shadow-md flex items-center gap-2"
