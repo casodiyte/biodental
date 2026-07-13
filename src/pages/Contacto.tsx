@@ -10,7 +10,10 @@ function CalEmbed({ calLink, brandColor, isActive }: { calLink: string, brandCol
         const cal = await getCalApi();
         cal("ui", {
           theme: "light",
-          cssVarsPerTheme: { light: { 'cal-brand': brandColor } },
+          cssVarsPerTheme: { 
+            light: { 'cal-brand': brandColor },
+            dark: { 'cal-brand': brandColor }
+          },
           hideEventTypeDetails: false,
           layout: "month_view"
         });
