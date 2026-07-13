@@ -2,18 +2,23 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Cal, { getCalApi } from "@calcom/embed-react";
 
-function CalEmbed({ calLink, brandColor }: { calLink: string, brandColor: string }) {
+function CalEmbed({ calLink, brandColor, isActive }: { calLink: string, brandColor: string, isActive: boolean }) {
   useEffect(() => {
+    if (!isActive) return;
     (async function () {
-      const cal = await getCalApi();
-      cal("ui", {
-        theme: "light",
-        styles: { branding: { brandColor: brandColor } },
-        hideEventTypeDetails: false,
-        layout: "month_view"
-      });
+      try {
+        const cal = await getCalApi();
+        cal("ui", {
+          theme: "light",
+          cssVarsPerTheme: { light: { 'cal-brand': brandColor } },
+          hideEventTypeDetails: false,
+          layout: "month_view"
+        });
+      } catch (error) {
+        console.warn("Cal UI config error:", error);
+      }
     })();
-  }, [brandColor]);
+  }, [brandColor, isActive]);
 
   return (
     <div className="w-full h-[600px] rounded-2xl overflow-hidden bg-white relative">
@@ -219,11 +224,12 @@ export default function Contacto() {
               className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl border-2 transition-colors duration-500"
               style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : 'rgba(147,167,133,0.3)' }}
             >
-              {activeTab === 'natural' ? (
-                <CalEmbed key="cal-natural" calLink="lnatural-dental" brandColor="#62C8C1" />
-              ) : (
-                <CalEmbed key="cal-bio" calLink="bioindent" brandColor="#93A785" />
-              )}
+              <div style={{ display: activeTab === 'natural' ? 'block' : 'none' }}>
+                <CalEmbed calLink="lnatural-dental" brandColor="#62C8C1" isActive={activeTab === 'natural'} />
+              </div>
+              <div style={{ display: activeTab === 'bio' ? 'block' : 'none' }}>
+                <CalEmbed calLink="bioindent" brandColor="#93A785" isActive={activeTab === 'bio'} />
+              </div>
             </motion.div>
           </div>
 
