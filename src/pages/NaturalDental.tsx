@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 export default function NaturalDental() {
   const philosophy = "Combinamos la experiencia clínica con tecnología avanzada para ofrecer odontología integral y tratamientos estéticos que transforman no solo tu sonrisa, sino tu confianza y calidad de vida.";
   const services = [
-    { title: "Odontología general y estética", icon: <Sparkles />, desc: "Tratamientos restaurativos con materiales bio-compatibles y de alta estética." },
+    { title: "Odontología integral y estética", icon: <Sparkles />, desc: "Tratamientos restaurativos con materiales bio-compatibles y de alta estética." },
     { title: "Ortodoncia convencional", icon: <Smile />, desc: "Corrección de la posición dental utilizando brackets tradicionales y estéticos." },
     { title: "Invisalign", icon: <Sparkles />, desc: "Alineadores invisibles de última generación para una sonrisa perfecta sin brackets." },
     { title: "Disfunción de ATM", icon: <Stethoscope />, desc: "Diagnóstico y tratamiento de problemas en la articulación temporomandibular." }

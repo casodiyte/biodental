@@ -12,7 +12,7 @@ export default function BioInDent() {
     { title: "Odontología Biológica", icon: <Leaf />, desc: "Tratamientos libres de metales, respetando la biología y salud general del cuerpo." },
     { title: "Ozonoterapia Dental", icon: <Droplet />, desc: "Uso de ozono médico para desinfección profunda, cicatrización y estimulación del sistema inmune local." },
     { title: "Examen Epigenético", icon: <FileHeart />, desc: "Evaluación para personalizar tratamientos basados en tu respuesta celular." },
-    { title: "Odontología General y Estética", icon: <Sparkles />, desc: "Cuidado integral, restaurador y embellecimiento de tu sonrisa." },
+    { title: "Odontología Integral y Estética", icon: <Sparkles />, desc: "Cuidado integral, restaurador y embellecimiento de tu sonrisa." },
     { title: "Disfunción de ATM", icon: <Activity />, desc: "Diagnóstico y tratamiento para la articulación temporomandibular." },
     { title: "Remoción Segura de Amalgamas", icon: <ShieldPlus />, desc: "Protocolo especializado para retirar empastes de metal minimizando la exposición a toxinas." }
   ];
