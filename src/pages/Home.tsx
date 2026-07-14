@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope, Calendar, MessageCircle } from 'lucide-react';
+import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope, Calendar, MessageCircle, Sparkles } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 
 export default function Home() {
@@ -13,38 +13,38 @@ export default function Home() {
       <section className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0">
         
         {/* Top Center Content (Headline) */}
-        <div className="absolute top-12 md:top-20 left-0 right-0 flex flex-col items-center justify-center z-30 pointer-events-auto px-4">
+        <div className="absolute top-8 md:top-12 left-0 right-0 flex flex-col items-center justify-center z-30 pointer-events-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center px-6 py-10 md:py-12 rounded-[2.5rem] w-full max-w-4xl bg-white/90 backdrop-blur-md shadow-2xl border border-white/50"
+            className="text-center px-6 py-8 md:py-10 rounded-[2rem] w-full max-w-3xl bg-white/80 backdrop-blur-md shadow-xl border border-white/50"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/80 px-4 py-1.5 rounded-full shadow-sm mb-6 border border-gray-100">
-              <span className="text-[#62C8C1]">✨</span>
-              <span className="text-[10px] md:text-xs font-semibold text-gray-500 tracking-wide uppercase">Clínica dental premium · San Rafael, CDMX</span>
+            <div className="inline-flex items-center gap-2 bg-white/90 px-4 py-1.5 rounded-full shadow-sm mb-4 border border-gray-100">
+              <Sparkles size={14} className="text-[#62C8C1]" />
+              <span className="text-[9px] md:text-[11px] font-bold text-gray-500 tracking-wider uppercase">Clínica dental premium · San Rafael, CDMX</span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#1A3A3A] mb-4 md:mb-6 leading-[1.1]">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#1A3A3A] mb-3 md:mb-5 leading-[1.1]">
               Dos enfoques,<br />
               <span className="text-[#62C8C1]">una misma misión</span>:<br />
               <span className="italic font-normal">cuidar tu sonrisa.</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-gray-600 text-sm md:text-lg max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
+            <p className="text-gray-600 text-xs md:text-base max-w-xl mx-auto mb-6 font-medium leading-relaxed">
               Atención dental integral y estética avanzada en un solo lugar, con tratamientos diseñados para tu salud, bienestar y confianza.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-8 py-3.5 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base">
-                <Calendar size={20} /> Agendar cita
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
+                <Calendar size={18} /> Agendar cita
               </Link>
-              <Link to="/contacto" className="bg-[#25D366] hover:bg-[#20b858] text-white px-8 py-3.5 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base">
-                <MessageCircle size={20} /> WhatsApp
+              <Link to="/contacto" className="bg-[#25D366] hover:bg-[#20b858] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
+                <MessageCircle size={18} /> WhatsApp
               </Link>
             </div>
           </motion.div>
@@ -72,8 +72,8 @@ export default function Home() {
         >
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
-          <div className="z-10 text-center flex flex-col items-center mt-12 md:mt-0 md:mr-24 transition-transform duration-500 group-hover:scale-105">
-            <div className="h-20 md:h-40 mb-3 md:mb-6 drop-shadow-lg">
+          <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:mr-24 transition-transform duration-500 group-hover:scale-105">
+            <div className="h-20 md:h-32 mb-3 md:mb-5 drop-shadow-lg">
               <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-full w-auto object-contain" />
             </div>
             <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#F5F2EC] mb-1 md:mb-2 drop-shadow-md">
@@ -107,9 +107,9 @@ export default function Home() {
 
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
-          <div className="z-10 text-center flex flex-col items-center mt-12 md:mt-0 md:ml-24 transition-transform duration-500 group-hover:scale-105">
-            <div className="h-20 md:h-40 mb-3 md:mb-8 relative flex justify-center items-center">
-              <div className="absolute -translate-y-4 md:-translate-y-6 w-24 h-24 md:w-40 md:h-40 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
+          <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:ml-24 transition-transform duration-500 group-hover:scale-105">
+            <div className="h-20 md:h-32 mb-3 md:mb-6 relative flex justify-center items-center">
+              <div className="absolute -translate-y-4 md:-translate-y-6 w-24 h-24 md:w-32 md:h-32 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
             </div>
             <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#1A3A3A] mb-1 md:mb-2">
@@ -133,12 +133,12 @@ export default function Home() {
            <motion.div 
              initial={{ opacity: 0, y: -20 }}
              animate={{ opacity: 1, y: 0 }}
-             className="bg-white/95 backdrop-blur-md rounded-[2rem] p-6 border border-white/50 shadow-2xl mx-auto max-w-sm"
+             className="bg-white/95 backdrop-blur-md rounded-[2rem] p-6 border border-white/50 shadow-2xl mx-auto max-w-[90%]"
            >
              {/* Badge */}
              <div className="inline-flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm mb-4 border border-gray-100">
-               <span className="text-[#62C8C1] text-xs">✨</span>
-               <span className="text-[8px] font-semibold text-gray-500 tracking-wide uppercase">Clínica premium · CDMX</span>
+               <Sparkles size={12} className="text-[#62C8C1]" />
+               <span className="text-[8px] font-bold text-gray-500 tracking-wide uppercase">Clínica premium · CDMX</span>
              </div>
 
              <h1 className="text-3xl font-serif font-bold text-[#1A3A3A] mb-3 leading-tight">
