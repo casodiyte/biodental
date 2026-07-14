@@ -92,8 +92,8 @@ export default function Home() {
           onMouseEnter={() => setHoveredSide('right')}
           onMouseLeave={() => setHoveredSide(null)}
         >
-          {/* Symmetrical Color Blend Divider */}
-          <div className="hidden md:block absolute top-0 -left-20 w-40 h-full bg-gradient-to-r from-[#93A785] to-[#62C8C1] pointer-events-none z-0 blur-2xl opacity-80"></div>
+          {/* Perfect Seamless Blend Divider */}
+          <div className="hidden md:block absolute top-0 left-0 w-16 md:w-20 h-full bg-gradient-to-r from-[#93A785] to-transparent pointer-events-none z-0"></div>
 
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
