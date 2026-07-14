@@ -37,7 +37,7 @@ export default function BioInDent() {
             transition={{ duration: 0.7 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-[var(--color-text)] mb-6">
+            <h1 className="text-5xl md:text-7xl font-serif font-bold text-[var(--color-primary)] mb-6 drop-shadow-sm">
               Bio in Dent
             </h1>
             <p className="text-xl md:text-2xl font-light text-[var(--color-text)]/80 max-w-2xl mx-auto">
@@ -50,17 +50,20 @@ export default function BioInDent() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="bg-[var(--color-surface)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-sm border border-[var(--color-primary)]/20"
+            className="bg-[var(--color-primary)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-xl border border-white/20 relative overflow-hidden"
           >
-            <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 flex items-center justify-center p-4">
-               <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="w-full h-full object-contain drop-shadow-md" />
+            {/* Soft background glow for card */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+
+            <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 flex items-center justify-center p-4 relative z-10 bg-white/10 rounded-full backdrop-blur-sm shadow-inner">
+               <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="w-full h-full object-contain drop-shadow-xl brightness-110" />
             </div>
             
-            <div className="flex-grow w-full text-center md:text-left">
+            <div className="flex-grow w-full text-center md:text-left relative z-10 text-white">
               <h2 className="text-3xl font-serif font-bold mb-2">Filosofía Bio in Dent</h2>
-              <p className="text-[var(--color-primary)] font-medium mb-6 uppercase tracking-wider text-sm">Odontología Biológica</p>
+              <p className="text-[var(--color-secondary)] font-medium mb-6 uppercase tracking-wider text-sm drop-shadow-md">Odontología Biológica</p>
               
-              <div className="relative border-l-2 border-[var(--color-primary)]/30 ml-3 md:ml-0 pl-6 text-[var(--color-text)]/80 leading-relaxed text-lg italic font-light">
+              <div className="relative border-l-2 border-[var(--color-secondary)]/50 ml-3 md:ml-0 pl-6 text-white/95 leading-relaxed text-lg italic font-light drop-shadow-sm">
                 "{philosophy}"
               </div>
             </div>
@@ -74,7 +77,7 @@ export default function BioInDent() {
       <section className="py-20 px-4 md:px-8 bg-[var(--color-surface)]">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-4">Nuestros Servicios</h2>
+            <h2 className="text-4xl font-serif font-bold mb-4 text-[var(--color-primary)]">Nuestros Servicios</h2>
             <div className="w-16 h-1 bg-[var(--color-primary)] mx-auto rounded-full"></div>
             <p className="mt-6 text-[var(--color-text)]/80 max-w-2xl mx-auto">
               La odontología biológica entiende que la boca está conectada con el resto del cuerpo. 
@@ -89,7 +92,7 @@ export default function BioInDent() {
           </div>
 
           <div className="text-center mt-24 mb-12">
-            <h2 className="text-3xl font-serif font-bold mb-4">Servicios por Especialista</h2>
+            <h2 className="text-3xl font-serif font-bold mb-4 text-[var(--color-primary)]">Servicios por Especialista</h2>
             <div className="w-12 h-1 bg-[var(--color-primary)] mx-auto rounded-full"></div>
           </div>
 
