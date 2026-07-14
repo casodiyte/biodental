@@ -120,12 +120,12 @@ export default function Contacto() {
                   transition={{ duration: 0.4 }}
                   className="absolute inset-0 bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-[#93A785]/30 flex flex-col md:flex-row"
                 >
-                  <div className="md:w-1/2 bg-[#93A785]/10 p-8 flex flex-col justify-center items-center text-center">
-                     <div className="h-24 mb-4">
-                        <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-full w-auto object-contain" />
+                  <div className="md:w-1/2 bg-[#93A785] p-8 flex flex-col justify-center items-center text-center">
+                     <div className="h-24 mb-4 relative z-10 bg-white/10 rounded-full p-2 backdrop-blur-sm shadow-inner">
+                        <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-full w-auto object-contain drop-shadow-xl brightness-110" />
                       </div>
-                      <h2 className="text-2xl font-serif font-bold text-[#2D4A3E]">Licenciada en Estomatología</h2>
-                      <p className="text-[#7A8E6E] font-medium uppercase tracking-wider text-xs mt-1">Odontología Biológica</p>
+                      <h2 className="text-2xl font-serif font-bold text-white drop-shadow-sm">Licenciada en Estomatología</h2>
+                      <p className="text-[#EDE4D4] font-medium uppercase tracking-wider text-xs mt-1 drop-shadow-sm">Odontología Biológica</p>
                   </div>
                   <div className="md:w-1/2 p-8 flex flex-col justify-center gap-6">
                     <a href="tel:5521385240" className="flex items-center gap-4 text-gray-700 hover:text-[#93A785] transition-colors group">
