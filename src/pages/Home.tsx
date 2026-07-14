@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope, Calendar, MessageCircle, Sparkles } from 'lucide-react';
+import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope, Calendar, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 
 export default function Home() {
