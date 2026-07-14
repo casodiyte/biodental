@@ -6,7 +6,7 @@ import ServiceCard from '../components/ui/ServiceCard';
 import SEO from '../components/SEO';
 
 export default function NaturalDental() {
-  const philosophy = "Combinamos la experiencia clínica con tecnología avanzada para ofrecer ortodoncia y tratamientos estéticos que transforman no solo tu sonrisa, sino tu confianza y calidad de vida.";
+  const philosophy = "Combinamos la experiencia clínica con tecnología avanzada para ofrecer odontología integral y tratamientos estéticos que transforman no solo tu sonrisa, sino tu confianza y calidad de vida.";
   const services = [
     { title: "Odontología general y estética", icon: <Sparkles />, desc: "Tratamientos restaurativos con materiales bio-compatibles y de alta estética." },
     { title: "Ortodoncia convencional", icon: <Smile />, desc: "Corrección de la posición dental utilizando brackets tradicionales y estéticos." },
