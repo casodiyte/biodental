@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope } from 'lucide-react';
+import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope, Calendar, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 
 export default function Home() {
@@ -13,19 +13,40 @@ export default function Home() {
       <section className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0">
         
         {/* Top Center Content (Headline) */}
-        <div className="absolute top-20 md:top-28 left-0 right-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+        <div className="absolute top-12 md:top-20 left-0 right-0 flex flex-col items-center justify-center z-30 pointer-events-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center px-4"
+            className="text-center px-6 py-10 md:py-12 rounded-[2.5rem] w-full max-w-4xl bg-white/90 backdrop-blur-md shadow-2xl border border-white/50"
           >
-            <h1 className="text-3xl md:text-5xl font-serif font-bold text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] mb-2">
-              Tu sonrisa, nuestra pasión
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/80 px-4 py-1.5 rounded-full shadow-sm mb-6 border border-gray-100">
+              <span className="text-[#62C8C1]">✨</span>
+              <span className="text-[10px] md:text-xs font-semibold text-gray-500 tracking-wide uppercase">Clínica dental premium · San Rafael, CDMX</span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#1A3A3A] mb-4 md:mb-6 leading-[1.1]">
+              Dos enfoques,<br />
+              <span className="text-[#62C8C1]">una misma misión</span>:<br />
+              <span className="italic font-normal">cuidar tu sonrisa.</span>
             </h1>
-            <p className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] text-xs md:text-lg font-medium">
-              Dos especialistas, un mismo compromiso con tu salud dental
+
+            {/* Subtitle */}
+            <p className="text-gray-600 text-sm md:text-lg max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
+              Atención dental integral y estética avanzada en un solo lugar, con tratamientos diseñados para tu salud, bienestar y confianza.
             </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-8 py-3.5 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base">
+                <Calendar size={20} /> Agendar cita
+              </Link>
+              <Link to="/contacto" className="bg-[#25D366] hover:bg-[#20b858] text-white px-8 py-3.5 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base">
+                <MessageCircle size={20} /> WhatsApp
+              </Link>
+            </div>
           </motion.div>
         </div>
           
@@ -108,13 +129,36 @@ export default function Home() {
       <section className="md:hidden relative w-full min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-12 px-4 overflow-hidden bg-gradient-to-br from-[#93A785] to-[#62C8C1]">
         
         {/* Top Text */}
-        <div className="relative z-20 text-center mb-8 mt-4">
-           <h1 className="text-3xl font-serif font-bold text-white drop-shadow-md mb-3 leading-tight">
-             Tu sonrisa,<br/>nuestra pasión
-           </h1>
-           <p className="text-white/95 drop-shadow-sm text-xs font-medium px-4">
-             Dos especialistas, un mismo compromiso con tu salud dental
-           </p>
+        <div className="relative z-20 text-center mb-6 mt-4 w-full">
+           <motion.div 
+             initial={{ opacity: 0, y: -20 }}
+             animate={{ opacity: 1, y: 0 }}
+             className="bg-white/95 backdrop-blur-md rounded-[2rem] p-6 border border-white/50 shadow-2xl mx-auto max-w-sm"
+           >
+             {/* Badge */}
+             <div className="inline-flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm mb-4 border border-gray-100">
+               <span className="text-[#62C8C1] text-xs">✨</span>
+               <span className="text-[8px] font-semibold text-gray-500 tracking-wide uppercase">Clínica premium · CDMX</span>
+             </div>
+
+             <h1 className="text-3xl font-serif font-bold text-[#1A3A3A] mb-3 leading-tight">
+               Dos enfoques,<br/>
+               <span className="text-[#62C8C1]">una misma misión</span>:<br/>
+               <span className="italic font-normal">cuidar tu sonrisa.</span>
+             </h1>
+             <p className="text-gray-600 text-[11px] font-medium leading-relaxed mb-6">
+               Atención dental integral y estética avanzada en un solo lugar.
+             </p>
+
+             <div className="flex flex-col gap-3">
+               <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-md flex items-center justify-center gap-2 text-sm w-full">
+                 <Calendar size={18} /> Agendar cita
+               </Link>
+               <Link to="/contacto" className="bg-[#25D366] hover:bg-[#20b858] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-md flex items-center justify-center gap-2 text-sm w-full">
+                 <MessageCircle size={18} /> WhatsApp
+               </Link>
+             </div>
+           </motion.div>
         </div>
 
         {/* Logos Side by Side - EXACTLY Equal Hierarchy */}
