@@ -18,14 +18,8 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center px-6 py-8 md:py-10 rounded-[2rem] w-full max-w-3xl bg-white/80 backdrop-blur-md shadow-xl border border-white/50"
+            className="text-center px-6 py-8 md:py-10 w-full max-w-3xl drop-shadow-sm"
           >
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/90 px-4 py-1.5 rounded-full shadow-sm mb-4 border border-gray-100">
-              <Sparkles size={14} className="text-[#62C8C1]" />
-              <span className="text-[9px] md:text-[11px] font-bold text-gray-500 tracking-wider uppercase">Clínica dental premium · San Rafael, CDMX</span>
-            </div>
-
             {/* Heading */}
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#1A3A3A] mb-3 md:mb-5 leading-[1.1]">
               Dos enfoques,<br />
@@ -133,14 +127,8 @@ export default function Home() {
            <motion.div 
              initial={{ opacity: 0, y: -20 }}
              animate={{ opacity: 1, y: 0 }}
-             className="bg-white/95 backdrop-blur-md rounded-[2rem] p-6 border border-white/50 shadow-2xl mx-auto max-w-[90%]"
+             className="px-6 py-4 mx-auto max-w-[90%] drop-shadow-sm"
            >
-             {/* Badge */}
-             <div className="inline-flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm mb-4 border border-gray-100">
-               <Sparkles size={12} className="text-[#62C8C1]" />
-               <span className="text-[8px] font-bold text-gray-500 tracking-wide uppercase">Clínica premium · CDMX</span>
-             </div>
-
              <h1 className="text-3xl font-serif font-bold text-[#1A3A3A] mb-3 leading-tight">
                Dos enfoques,<br/>
                <span className="text-[#62C8C1]">una misma misión</span>:<br/>
