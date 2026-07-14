@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* Right Side: Natural Dental (Teal) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-gradient-to-b from-white via-[#E6F7F6] to-[#62C8C1] shadow-[-15px_0_30px_-5px_rgba(0,0,0,0.1)] z-10"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-gradient-to-b from-white via-[#E6F7F6] to-[#62C8C1] z-10"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '55%' : hoveredSide === 'left' ? '45%' : '50%'
           }}
@@ -92,8 +92,8 @@ export default function Home() {
           onMouseEnter={() => setHoveredSide('right')}
           onMouseLeave={() => setHoveredSide(null)}
         >
-          {/* Shadow Divider for Desktop */}
-          <div className="hidden md:block absolute top-0 -left-6 w-6 h-full bg-gradient-to-r from-transparent to-black/5 pointer-events-none"></div>
+          {/* Smooth Color Blend Divider */}
+          <div className="hidden md:block absolute top-0 left-0 w-32 md:w-64 h-full bg-gradient-to-r from-[#93A785] to-transparent pointer-events-none z-0"></div>
 
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
