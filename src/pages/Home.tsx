@@ -13,12 +13,12 @@ export default function Home() {
       <section className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0">
         
         {/* Top Center Content (Headline) */}
-        <div className="absolute top-8 md:top-12 left-0 right-0 flex flex-col items-center justify-center z-30 pointer-events-auto px-4">
+        <div className="absolute top-8 md:top-12 left-0 right-0 flex flex-col items-center justify-center z-30 pointer-events-none px-4">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center px-6 py-8 md:py-10 w-full max-w-3xl drop-shadow-sm"
+            className="text-center px-6 py-8 md:py-10 w-full max-w-3xl drop-shadow-sm pointer-events-none"
           >
             {/* Heading */}
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#1A3A3A] mb-3 md:mb-5 leading-[1.1]">
@@ -33,7 +33,7 @@ export default function Home() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pointer-events-auto">
               <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <Calendar size={18} /> Agendar cita
               </Link>
@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* Right Side: Natural Dental (Teal) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-gradient-to-b from-white via-[#E6F7F6] to-[#62C8C1]"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-gradient-to-b from-white via-[#E6F7F6] to-[#62C8C1] shadow-[-15px_0_30px_-5px_rgba(0,0,0,0.1)] z-10"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '55%' : hoveredSide === 'left' ? '45%' : '50%'
           }}
@@ -92,12 +92,8 @@ export default function Home() {
           onMouseEnter={() => setHoveredSide('right')}
           onMouseLeave={() => setHoveredSide(null)}
         >
-          {/* Organic SVG Divider for Desktop */}
-          <div className="hidden md:block absolute top-0 -left-1 w-24 h-full text-[#93A785]">
-            <svg preserveAspectRatio="none" viewBox="0 0 100 100" className="w-full h-full fill-current">
-              <path d="M0,0 Q50,50 0,100 Z" />
-            </svg>
-          </div>
+          {/* Shadow Divider for Desktop */}
+          <div className="hidden md:block absolute top-0 -left-6 w-6 h-full bg-gradient-to-r from-transparent to-black/5 pointer-events-none"></div>
 
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
