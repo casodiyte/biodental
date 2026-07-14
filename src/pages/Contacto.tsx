@@ -14,12 +14,17 @@ function CalEmbed({ calLink }: { calLink: string }) {
 }
 import { MapPin, Phone, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
+import SEO from '../components/SEO';
 
 export default function Contacto() {
   const [activeTab, setActiveTab] = useState<'natural' | 'bio'>('natural');
 
   return (
     <PageTransition>
+      <SEO 
+        title="Contacto y Citas" 
+        description="Agenda tu cita con Natural Dental o Bio in Dent. Ubicados en CDMX. Llámanos, mándanos WhatsApp o agenda en línea."
+      />
       <section className="pt-32 pb-20 px-4 md:px-8 min-h-[calc(100vh-300px)] relative transition-colors duration-500"
                style={{ backgroundColor: activeTab === 'natural' ? '#F0FAFA' : '#F5F2EC' }}>
         

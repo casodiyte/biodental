@@ -35,12 +35,17 @@ function AppContent() {
   );
 }
 
+import { HelmetProvider } from 'react-helmet-async';
+
 function App() {
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 
 export default App;
+

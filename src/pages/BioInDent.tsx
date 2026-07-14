@@ -3,6 +3,7 @@ import { Leaf, Droplet, Activity, Heart, ShieldPlus, FileHeart, Sparkles, Stetho
 import PageTransition from '../components/layout/PageTransition';
 import WaveDivider from '../components/ui/WaveDivider';
 import ServiceCard from '../components/ui/ServiceCard';
+import SEO from '../components/SEO';
 
 export default function BioInDent() {
   const philosophy = "Con una visión holística y biológica, nuestro enfoque se centra en tratar la causa raíz de los problemas dentales, utilizando ozonoterapia y materiales 100% biocompatibles para proteger la salud sistémica del paciente.";
@@ -28,6 +29,10 @@ export default function BioInDent() {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Bio in Dent - Odontología Biológica" 
+        description="Bio in Dent. Clínica de Odontología Biológica y Ozonoterapia. Tratamientos integrales y libres de metales para proteger tu salud sistémica."
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 md:px-8 bg-[var(--color-bg)]">
         <div className="container mx-auto max-w-5xl">

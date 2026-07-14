@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronDown, ArrowRight, Shield, HeartHandshake, Microscope, Calendar, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
 
   return (
     <PageTransition className="relative min-h-screen">
+      <SEO 
+        title="Inicio" 
+        description="Natural Dental y Bio in Dent, tu clínica de odontología biológica y ortodoncia en CDMX. Protegemos tu salud sistémica con materiales biocompatibles y tratamientos avanzados."
+      />
       {/* Desktop Split Hero Section (Hidden on mobile) */}
       <section className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0">
         

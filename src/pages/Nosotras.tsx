@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { HeartHandshake, Star, Shield, Lightbulb } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
+import SEO from '../components/SEO';
 
 export default function Nosotras() {
   const values = [
@@ -27,6 +28,10 @@ export default function Nosotras() {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Nosotras - Conoce a las Especialistas" 
+        description="Conoce a la C.D.E.O Lorena Arellano Rosales (Natural Dental) y a la Lic. en Estomatología (Bio in Dent). Profesionales dedicadas a tu salud dental integral."
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-4 md:px-8 bg-[var(--color-bg)]">
         <div className="container mx-auto max-w-4xl text-center">

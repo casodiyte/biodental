@@ -3,9 +3,10 @@ import { Sparkles, Stethoscope, Smile, ShieldCheck, Heart } from 'lucide-react';
 import PageTransition from '../components/layout/PageTransition';
 import WaveDivider from '../components/ui/WaveDivider';
 import ServiceCard from '../components/ui/ServiceCard';
+import SEO from '../components/SEO';
 
 export default function NaturalDental() {
-  const philosophy = "Nuestra pasión es diseñar sonrisas funcionales y estéticamente perfectas, guiando el desarrollo facial y corrigiendo alteraciones con la tecnología más avanzada, siempre brindando un trato cálido y humano.";
+  const philosophy = "Combinamos la experiencia clínica con tecnología avanzada para ofrecer ortodoncia y tratamientos estéticos que transforman no solo tu sonrisa, sino tu confianza y calidad de vida.";
   const services = [
     { title: "Odontología general y estética", icon: <Sparkles />, desc: "Tratamientos restaurativos con materiales bio-compatibles y de alta estética." },
     { title: "Ortodoncia convencional", icon: <Smile />, desc: "Corrección de la posición dental utilizando brackets tradicionales y estéticos." },
@@ -24,6 +25,10 @@ export default function NaturalDental() {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Natural Dental - Ortodoncia" 
+        description="Natural Dental. Ortodoncia y Ortopedia Maxilar. Diseñamos sonrisas con tecnología avanzada, Invisalign y especialistas en ortodoncia."
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 md:px-8 bg-[var(--color-bg)]">
         <div className="container mx-auto max-w-5xl">
