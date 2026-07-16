@@ -152,7 +152,7 @@ export default function Home() {
            >
              <h1 className="text-[2.1rem] font-serif font-bold text-[#2D4A3E] mb-1 leading-tight tracking-tight">
                Dos enfoques,<br/>
-               <span className="text-[#32b2a6]">una misma leyenda:</span><br/>
+               <span className="text-[#32b2a6]">una misma misión:</span><br/>
                <span className="font-serif italic font-medium text-[#c49845] text-4xl block mt-2 drop-shadow-sm" style={{fontFamily: "'Playfair Display', serif"}}>amar la salud de tu sonrisa.</span>
              </h1>
 
