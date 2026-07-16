@@ -10,7 +10,7 @@ export default function BioInDent() {
 
   const services = [
     { title: "Odontología Biológica", icon: <Leaf />, desc: "Tratamientos libres de metales, respetando la biología y salud general del cuerpo." },
-    { title: "Ozonoterapia Dental", icon: <Droplet />, desc: "Uso de ozono médico para desinfección profunda, cicatrización y estimulación del sistema inmune local." },
+    { title: "Ozonoterapia Dental", icon: <Droplet />, desc: "Uso de ozono médico para desinfección profunda." },
     { title: "Examen Epigenético", icon: <FileHeart />, desc: "Evaluación para personalizar tratamientos basados en tu respuesta celular." },
     { title: "Odontología Integral y Estética", icon: <Sparkles />, desc: "Cuidado integral, restaurador y embellecimiento de tu sonrisa." },
     { title: "Disfunción de ATM", icon: <Activity />, desc: "Diagnóstico y tratamiento para la articulación temporomandibular." },
