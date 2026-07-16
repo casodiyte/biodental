@@ -125,63 +125,87 @@ export default function Home() {
       </section>
 
       {/* Mobile Unified Hero Section */}
-      <section className="md:hidden relative w-full min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-12 px-4 overflow-hidden bg-gradient-to-br from-[#93A785] to-[#62C8C1]">
+      <section className="md:hidden relative w-full min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-8 px-4 overflow-hidden bg-gradient-to-br from-[#eaf2e3] via-[#e2f1ec] to-[#cbe8e4]">
+        
+        {/* Subtle leaf background patterns */}
+        <div className="absolute top-10 -left-10 opacity-30 w-48 h-48 pointer-events-none">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-[#93A785]">
+            <path d="M45.7,117.8c0.6-2.5,1.5-5.1,2.8-7.5c2.3-4.5,5.6-8.5,9.6-11.8c7.9-6.5,17.9-10.3,28.2-11.1c10.3-0.8,20.7,1.4,29.9,6.2 c9.2,4.8,16.8,11.8,22,20.4c5.2,8.6,7.8,18.7,7.4,28.8c-0.2,5.1-1.2,10.2-3.1,15c-1.9,4.8-4.7,9.3-8.2,13.2c-7,7.8-16.1,13.4-26.2,16 c-10.1,2.6-21,2.1-30.8-1.4c-9.8-3.5-18.2-9.7-24.3-17.9c-6.1-8.2-9.6-18.1-10.1-28.4C43,131.7,43.9,124.6,45.7,117.8z" opacity="0.1"/>
+            <path d="M110.5,84.1c-15.1,0.5-30.7,8.6-39.7,21.5c-4.5,6.4-7.4,14-8.3,21.9c-0.5,4-0.1,8.1,0.8,11.9c2.9,12.3,11.4,22.8,22.5,28.2 c11.1,5.4,24.1,6.3,35.6,2.3c11.5-4,21.1-11.8,26.7-22.1c5.6-10.3,6.8-22.4,3.2-33.3c-1.8-5.5-4.8-10.5-8.8-14.5 C132.5,90.2,121.7,83.7,110.5,84.1z" fill="none" stroke="#93A785" strokeWidth="1"/>
+            <path d="M72.2,106.8c12.3-15.4,33.1-22.1,52-16.7c9.5,2.7,18,8.4,24.2,16.5c3.1,4.1,5.6,8.7,7,13.7c1.4,5,1.7,10.2,0.9,15.2 c-1.6,10-7.3,18.8-15.3,24.7c-8,5.9-17.8,8.8-27.7,8.1c-9.9-0.7-19.2-5.1-26.3-12.3c-3.6-3.6-6.4-7.8-8.4-12.5 C76.6,134.1,72.7,120.3,72.2,106.8z" fill="none" stroke="#93A785" strokeWidth="0.5"/>
+          </svg>
+        </div>
+        <div className="absolute top-1/2 -right-12 opacity-30 w-56 h-56 pointer-events-none transform rotate-180">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-[#93A785]">
+            <path d="M45.7,117.8c0.6-2.5,1.5-5.1,2.8-7.5c2.3-4.5,5.6-8.5,9.6-11.8c7.9-6.5,17.9-10.3,28.2-11.1c10.3-0.8,20.7,1.4,29.9,6.2 c9.2,4.8,16.8,11.8,22,20.4c5.2,8.6,7.8,18.7,7.4,28.8c-0.2,5.1-1.2,10.2-3.1,15c-1.9,4.8-4.7,9.3-8.2,13.2c-7,7.8-16.1,13.4-26.2,16 c-10.1,2.6-21,2.1-30.8-1.4c-9.8-3.5-18.2-9.7-24.3-17.9c-6.1-8.2-9.6-18.1-10.1-28.4C43,131.7,43.9,124.6,45.7,117.8z" opacity="0.1"/>
+            <path d="M110.5,84.1c-15.1,0.5-30.7,8.6-39.7,21.5c-4.5,6.4-7.4,14-8.3,21.9c-0.5,4-0.1,8.1,0.8,11.9c2.9,12.3,11.4,22.8,22.5,28.2 c11.1,5.4,24.1,6.3,35.6,2.3c11.5-4,21.1-11.8,26.7-22.1c5.6-10.3,6.8-22.4,3.2-33.3c-1.8-5.5-4.8-10.5-8.8-14.5 C132.5,90.2,121.7,83.7,110.5,84.1z" fill="none" stroke="#93A785" strokeWidth="1"/>
+            <path d="M72.2,106.8c12.3-15.4,33.1-22.1,52-16.7c9.5,2.7,18,8.4,24.2,16.5c3.1,4.1,5.6,8.7,7,13.7c1.4,5,1.7,10.2,0.9,15.2 c-1.6,10-7.3,18.8-15.3,24.7c-8,5.9-17.8,8.8-27.7,8.1c-9.9-0.7-19.2-5.1-26.3-12.3c-3.6-3.6-6.4-7.8-8.4-12.5 C76.6,134.1,72.7,120.3,72.2,106.8z" fill="none" stroke="#93A785" strokeWidth="0.5"/>
+          </svg>
+        </div>
         
         {/* Top Text */}
-        <div className="relative z-20 text-center mb-6 mt-4 w-full">
+        <div className="relative z-20 text-center mb-6 mt-2 w-full">
            <motion.div 
              initial={{ opacity: 0, y: -20 }}
              animate={{ opacity: 1, y: 0 }}
-             className="px-6 py-4 mx-auto max-w-[90%] drop-shadow-sm"
+             className="px-6 py-2 mx-auto max-w-[95%] drop-shadow-sm"
            >
-             <h1 className="text-3xl font-serif font-bold text-[#1A3A3A] mb-3 leading-tight">
+             <h1 className="text-[2.1rem] font-serif font-bold text-[#2D4A3E] mb-1 leading-tight tracking-tight">
                Dos enfoques,<br/>
-               <span className="text-[#62C8C1]">una misma misión</span>:<br/>
-               <span className="italic font-normal">cuidar tu sonrisa.</span>
+               <span className="text-[#32b2a6]">una misma leyenda:</span><br/>
+               <span className="font-serif italic font-medium text-[#c49845] text-4xl block mt-2 drop-shadow-sm" style={{fontFamily: "'Playfair Display', serif"}}>amar la salud de tu sonrisa.</span>
              </h1>
-             <p className="text-gray-600 text-[11px] font-medium leading-relaxed mb-6">
+
+             {/* Heart Divider */}
+             <div className="flex items-center justify-center gap-2 my-4 opacity-70">
+                <div className="w-16 h-px bg-[#c49845]"></div>
+                <svg className="w-4 h-4 text-[#c49845]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                <div className="w-16 h-px bg-[#c49845]"></div>
+             </div>
+
+             <p className="text-[#2D4A3E] text-[13px] font-medium leading-relaxed mb-6 px-4">
                Atención dental integral y estética avanzada en un solo lugar.
              </p>
 
-             <div className="flex flex-col gap-3">
-               <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-md flex items-center justify-center gap-2 text-sm w-full">
-                 <Calendar size={18} /> Agendar cita
+             <div className="flex flex-col gap-3 px-2">
+               <Link to="/contacto" className="bg-gradient-to-b from-[#40c4b6] to-[#25a598] hover:to-[#209488] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(40,196,182,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
+                 <Calendar size={18} strokeWidth={2.5} /> Agendar cita
                </Link>
-               <Link to="/contacto" className="bg-[#25D366] hover:bg-[#20b858] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-md flex items-center justify-center gap-2 text-sm w-full">
-                 <MessageCircle size={18} /> WhatsApp
+               <Link to="/contacto" className="bg-gradient-to-b from-[#35d05e] to-[#25ad46] hover:to-[#1e953a] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
+                 <MessageCircle size={18} strokeWidth={2.5} /> WhatsApp
                </Link>
              </div>
            </motion.div>
         </div>
 
         {/* Logos Side by Side - EXACTLY Equal Hierarchy */}
-        <div className="relative z-20 w-full max-w-sm mx-auto bg-white/95 backdrop-blur-md rounded-[2rem] p-5 border border-white/50 shadow-2xl flex flex-col gap-6">
-           <div className="flex flex-row items-stretch justify-center gap-4">
+        <div className="relative z-20 w-full max-w-[95%] mx-auto bg-white rounded-[2rem] p-5 shadow-[0_8px_30px_rgba(0,0,0,0.08)] flex flex-col gap-6 mt-2 border border-gray-100">
+           <div className="flex flex-row items-stretch justify-center gap-3">
               
               {/* Bio in Dent */}
               <div className="flex-1 flex flex-col items-center text-center">
-                 <div className="h-16 mb-4 flex items-center justify-center w-full">
+                 <div className="h-14 mb-4 flex items-center justify-center w-full">
                     <img src="/logos/bio-logo.png" alt="Bio in Dent" className="max-h-full max-w-[90%] object-contain" />
                  </div>
-                 <h2 className="text-[13px] font-serif font-bold text-[#93A785] mb-1">Bio in Dent</h2>
-                 <p className="text-[9px] text-gray-500 leading-tight mb-4 flex-grow">Odontología Biológica y Ozonoterapia</p>
+                 <h2 className="text-[14px] font-serif font-bold text-[#93A785] mb-1">Bio in Dent</h2>
+                 <p className="text-[10px] text-[#4A5568] leading-snug mb-5 flex-grow">Odontología Biológica<br/>y Ozonoterapia</p>
                  <Link to="/bio-in-dent" className="bg-[#93A785] hover:bg-[#7b8e6f] text-white px-2 py-2.5 rounded-full text-[10px] uppercase tracking-wider font-bold w-full transition-colors shadow-sm flex items-center justify-center gap-1">
-                   Descubrir <ArrowRight size={10} />
+                   DESCUBRIR <ArrowRight size={12} strokeWidth={2.5} />
                  </Link>
               </div>
               
               {/* Divider */}
-              <div className="w-px bg-gray-200 my-2 rounded-full"></div>
+              <div className="w-px bg-gray-200 my-4"></div>
               
               {/* Natural Dental */}
               <div className="flex-1 flex flex-col items-center text-center">
-                 <div className="h-16 mb-4 flex items-center justify-center w-full">
+                 <div className="h-14 mb-4 flex items-center justify-center w-full">
                     <img src="/logos/natural-logo.png" alt="Natural Dental" className="max-h-full max-w-[90%] object-contain" />
                  </div>
-                 <h2 className="text-[13px] font-serif font-bold text-[#62C8C1] mb-1">Natural Dental</h2>
-                 <p className="text-[9px] text-gray-500 leading-tight mb-4 flex-grow">Odontología Integral y Ortodoncia</p>
+                 <h2 className="text-[14px] font-serif font-bold text-[#62C8C1] mb-1">Natural Dental</h2>
+                 <p className="text-[10px] text-[#4A5568] leading-snug mb-5 flex-grow">Odontología Integral<br/>y Ortodoncia</p>
                  <Link to="/natural-dental" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-2 py-2.5 rounded-full text-[10px] uppercase tracking-wider font-bold w-full transition-colors shadow-sm flex items-center justify-center gap-1">
-                   Descubrir <ArrowRight size={10} />
+                   DESCUBRIR <ArrowRight size={12} strokeWidth={2.5} />
                  </Link>
               </div>
 
