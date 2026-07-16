@@ -17,7 +17,7 @@ import PageTransition from '../components/layout/PageTransition';
 import SEO from '../components/SEO';
 
 export default function Contacto() {
-  const [activeTab, setActiveTab] = useState<'natural' | 'bio'>('natural');
+  const [activeTab, setActiveTab] = useState<'natural' | 'bio' | null>(null);
 
   return (
     <PageTransition>
@@ -26,7 +26,7 @@ export default function Contacto() {
         description="Agenda tu cita con Natural Dental o Bio in Dent. Ubicados en CDMX. Llámanos, mándanos WhatsApp o agenda en línea."
       />
       <section className="pt-32 pb-20 px-4 md:px-8 min-h-[calc(100vh-300px)] relative transition-colors duration-500"
-               style={{ backgroundColor: activeTab === 'natural' ? '#F0FAFA' : '#F5F2EC' }}>
+               style={{ backgroundColor: activeTab === 'natural' ? '#F0FAFA' : activeTab === 'bio' ? '#F5F2EC' : '#FAF9F6' }}>
         
         <div className="container mx-auto max-w-4xl relative z-10">
           <motion.div 
@@ -46,7 +46,7 @@ export default function Contacto() {
           <div className="flex justify-center mb-12">
             <div className="bg-white p-2 rounded-full shadow-md flex relative overflow-hidden">
               <div 
-                className="absolute top-2 bottom-2 w-[calc(50%-8px)] rounded-full transition-all duration-500 ease-out z-0"
+                className={`absolute top-2 bottom-2 w-[calc(50%-8px)] rounded-full transition-all duration-500 ease-out z-0 ${activeTab === null ? 'opacity-0' : 'opacity-100'}`}
                 style={{ 
                   left: activeTab === 'natural' ? '8px' : 'calc(50% + 4px)',
                   backgroundColor: activeTab === 'natural' ? '#62C8C1' : '#93A785'
@@ -116,7 +116,7 @@ export default function Contacto() {
                     </a>
                   </div>
                 </motion.div>
-              ) : (
+              ) : activeTab === 'bio' ? (
                 <motion.div
                   key="bio"
                   initial={{ opacity: 0, x: 50, scale: 0.95 }}
@@ -162,6 +162,19 @@ export default function Contacto() {
                     </a>
                   </div>
                 </motion.div>
+              ) : (
+                <motion.div
+                  key="empty"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0 bg-white/60 backdrop-blur-md rounded-3xl shadow-sm overflow-hidden border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center p-8"
+                >
+                  <p className="text-gray-500 text-lg font-medium max-w-sm">
+                    Por favor, selecciona una clínica arriba para ver su información de contacto.
+                  </p>
+                </motion.div>
               )}
             </AnimatePresence>
           </div>
@@ -183,7 +196,7 @@ export default function Contacto() {
             <div className="flex justify-center mb-10">
               <div className="bg-white p-2 rounded-full shadow-md flex relative overflow-hidden">
                 <div 
-                  className="absolute top-2 bottom-2 w-[calc(50%-8px)] rounded-full transition-all duration-500 ease-out z-0"
+                  className={`absolute top-2 bottom-2 w-[calc(50%-8px)] rounded-full transition-all duration-500 ease-out z-0 ${activeTab === null ? 'opacity-0' : 'opacity-100'}`}
                   style={{ 
                     left: activeTab === 'natural' ? '8px' : 'calc(50% + 4px)',
                     backgroundColor: activeTab === 'natural' ? '#62C8C1' : '#93A785'
@@ -208,13 +221,17 @@ export default function Contacto() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl border-2 transition-colors duration-500"
-              style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : 'rgba(147,167,133,0.3)' }}
+              className={`bg-white rounded-[2rem] p-4 md:p-8 shadow-xl border-2 transition-colors duration-500 ${activeTab === null ? 'min-h-[300px] flex items-center justify-center' : ''}`}
+              style={{ borderColor: activeTab === 'natural' ? 'rgba(98,200,193,0.3)' : activeTab === 'bio' ? 'rgba(147,167,133,0.3)' : 'rgba(229,231,235,0.8)' }}
             >
               {activeTab === 'natural' ? (
                 <CalEmbed calLink="lnatural-dental" />
-              ) : (
+              ) : activeTab === 'bio' ? (
                 <CalEmbed calLink="bioindent" />
+              ) : (
+                <div className="text-center p-8">
+                  <p className="text-gray-500 text-lg font-medium">Selecciona una clínica arriba para cargar el calendario de citas.</p>
+                </div>
               )}
             </motion.div>
           </div>
