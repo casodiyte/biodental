@@ -80,7 +80,7 @@ export default function Contacto() {
                   className="absolute inset-0 bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-[#62C8C1]/30 flex flex-col md:flex-row"
                 >
                   <div className="md:w-1/2 bg-[#62C8C1]/10 p-8 flex flex-col justify-center items-center text-center">
-                     <div className="h-24 mb-4">
+                     <div className="h-36 w-36 mb-6 flex items-center justify-center mx-auto">
                         <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain" />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-[#1A3A3A]">C.D.E.O Lorena Arellano Rosales</h2>
@@ -126,7 +126,7 @@ export default function Contacto() {
                   className="absolute inset-0 bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-[#93A785]/30 flex flex-col md:flex-row"
                 >
                   <div className="md:w-1/2 bg-[#93A785] p-8 flex flex-col justify-center items-center text-center">
-                     <div className="h-24 mb-4 relative z-10 bg-white/10 rounded-full p-2 backdrop-blur-sm shadow-inner">
+                     <div className="h-36 w-36 mb-6 relative z-10 bg-white/10 rounded-full p-4 backdrop-blur-sm shadow-inner flex items-center justify-center mx-auto">
                         <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-full w-auto object-contain drop-shadow-xl brightness-110" />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-white drop-shadow-sm">Licenciada en Estomatología</h2>
