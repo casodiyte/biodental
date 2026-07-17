@@ -122,7 +122,7 @@ export default function Home() {
 
             <div className="h-28 md:h-48 mb-3 md:mb-6 relative flex justify-center items-center">
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
-              <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
+              <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10 saturate-150 contrast-125" />
             </div>
             <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#0CA4A5] mb-1 md:mb-2">
               Natural Dental
@@ -213,7 +213,7 @@ export default function Home() {
               {/* Natural Dental */}
               <div className="flex-1 flex flex-col items-center text-center">
                  <div className="h-14 mb-4 flex items-center justify-center w-full">
-                    <img src="/logos/natural-logo.png" alt="Natural Dental" className="max-h-full max-w-[90%] object-contain" />
+                    <img src="/logos/natural-logo.png" alt="Natural Dental" className="max-h-full max-w-[90%] object-contain saturate-150 contrast-125" />
                  </div>
                  <h2 className="text-[14px] font-serif font-bold text-[#62C8C1] mb-1">Natural Dental</h2>
                  <p className="text-[10px] text-[#4A5568] leading-snug mb-5 flex-grow">Odontología Integral<br/>y Ortodoncia</p>
