@@ -118,17 +118,17 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent z-0"></div>
           
           <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:ml-24 transition-transform duration-500 group-hover:scale-105 relative">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-black/10 blur-3xl rounded-full -z-10 pointer-events-none"></div>
 
             <div className="h-28 md:h-48 mb-3 md:mb-6 relative flex justify-center items-center">
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
             </div>
-            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#62C8C1] mb-1 md:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#62C8C1] mb-1 md:mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
               Natural Dental
             </h2>
-            <p className="text-[#62C8C1] font-medium text-sm md:text-lg mb-0.5 md:mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">C.D.E.O Lorena Arellano Rosales</p>
-            <p className="text-[#62C8C1]/90 text-xs md:text-sm mb-4 md:mb-6 max-w-xs drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">Odontología Integral y Ortodoncia</p>
+            <p className="text-[#62C8C1] font-medium text-sm md:text-lg mb-0.5 md:mb-1" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>C.D.E.O Lorena Arellano Rosales</p>
+            <p className="text-[#62C8C1]/90 text-xs md:text-sm mb-4 md:mb-6 max-w-xs" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>Odontología Integral y Ortodoncia</p>
             
             <Link to="/natural-dental" className="inline-flex items-center gap-2 bg-[#F0FAFA] text-[#1A3A3A] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
