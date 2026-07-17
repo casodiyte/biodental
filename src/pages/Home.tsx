@@ -27,8 +27,11 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center px-6 py-8 md:py-10 w-full max-w-3xl drop-shadow-sm pointer-events-none"
+            className="text-center px-6 py-8 md:py-10 w-full max-w-3xl drop-shadow-sm pointer-events-none relative"
           >
+            {/* Glow for text readability */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-white/60 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+
             {/* Heading */}
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#2D4A3E] mb-3 md:mb-5 leading-[1.1]">
               Dos enfoques,<br />
@@ -73,13 +76,15 @@ export default function Home() {
           onMouseLeave={() => setHoveredSide(null)}
         >
           {/* Plant Decoration */}
-          <div className="absolute top-1/2 -translate-y-1/2 -left-20 md:-left-24 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-start pb-0 pl-0">
+          <div className="absolute top-1/2 -translate-y-1/2 -left-32 md:-left-48 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-start pb-0 pl-0">
             <img src="/images/plant-edge.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-left-bottom" />
           </div>
           
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
-          <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:mr-24 transition-transform duration-500 group-hover:scale-105">
+          <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:mr-24 transition-transform duration-500 group-hover:scale-105 relative">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-black/20 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+            
             <div className="h-28 md:h-48 mb-3 md:mb-5 drop-shadow-lg">
               <img src="/logos/bio-logo.png" alt="Bio in Dent Logo" className="h-full w-auto object-contain" />
             </div>
@@ -106,13 +111,15 @@ export default function Home() {
           onMouseLeave={() => setHoveredSide(null)}
         >
           {/* Plant Decoration (Flipped) */}
-          <div className="absolute top-1/2 -translate-y-1/2 -right-20 md:-right-24 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-end pb-0 pr-0">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-32 md:-right-48 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-end pb-0 pr-0">
             <img src="/images/plant-edge.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-right-bottom transform -scale-x-100" />
           </div>
 
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent z-0"></div>
           
-          <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:ml-24 transition-transform duration-500 group-hover:scale-105">
+          <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:ml-24 transition-transform duration-500 group-hover:scale-105 relative">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+
             <div className="h-28 md:h-48 mb-3 md:mb-6 relative flex justify-center items-center">
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
