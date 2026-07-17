@@ -111,7 +111,7 @@ export default function Home() {
           onMouseLeave={() => setHoveredSide(null)}
         >
           {/* Plant Decoration (Flipped) */}
-          <div className="absolute top-1/2 -translate-y-1/2 -right-32 md:-right-48 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-end pb-0 pr-0">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-32 md:-right-80 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-end pb-0 pr-0">
             <img src="/images/plant-edge.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-right-bottom transform -scale-x-100" />
           </div>
 
