@@ -18,7 +18,7 @@ export default function Home() {
       <section 
         className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0 transition-colors duration-700"
         style={{ 
-          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #90DCD6 100%)` 
+          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #FFFFFF 100%)` 
         }}
       >
         {/* Top Center Content (Headline) */}
@@ -124,11 +124,11 @@ export default function Home() {
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
             </div>
-            <h2 className="text-3xl md:text-6xl font-serif font-bold text-white mb-1 md:mb-2 drop-shadow-md">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#185B5A] mb-1 md:mb-2">
               Natural Dental
             </h2>
-            <p className="text-white/90 font-medium text-sm md:text-lg mb-0.5 md:mb-1 drop-shadow-sm">C.D.E.O Lorena Arellano Rosales</p>
-            <p className="text-white/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs drop-shadow-sm">Odontología Integral y Ortodoncia</p>
+            <p className="text-[#185B5A]/90 font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
+            <p className="text-[#185B5A]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Odontología Integral y Ortodoncia</p>
             
             <Link to="/natural-dental" className="inline-flex items-center gap-2 bg-[#F0FAFA] text-[#1A3A3A] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
