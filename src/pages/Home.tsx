@@ -26,10 +26,10 @@ export default function Home() {
             className="text-center px-6 py-8 md:py-10 w-full max-w-3xl drop-shadow-sm pointer-events-none"
           >
             {/* Heading */}
-            <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#1A3A3A] mb-3 md:mb-5 leading-[1.1]">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#2D4A3E] mb-3 md:mb-5 leading-[1.1]">
               Dos enfoques,<br />
-              <span className="text-[#62C8C1]">una misma misión</span>:<br />
-              <span className="italic font-normal">cuidar tu sonrisa.</span>
+              <span className="text-[#93A785] italic font-medium" style={{fontFamily: "'Playfair Display', serif"}}>una misma misión:</span><br />
+              <span className="font-normal">cuidar tu sonrisa.</span>
             </h1>
 
             {/* Subtitle */}
@@ -39,10 +39,10 @@ export default function Home() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pointer-events-auto">
-              <Link to="/contacto" className="bg-[#62C8C1] hover:bg-[#50b2ab] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
+              <Link to="/contacto" className="bg-[#93A785] hover:bg-[#7d906e] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <Calendar size={18} /> Agendar cita
               </Link>
-              <Link to="/contacto" className="bg-[#25D366] hover:bg-[#20b858] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
+              <Link to="/contacto" className="bg-[#2D4A3E] hover:bg-[#1A3A3A] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <MessageCircle size={18} /> WhatsApp
               </Link>
             </div>
@@ -60,15 +60,20 @@ export default function Home() {
 
         {/* Left Side: Bio in Dent (Green) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-[#93A785]"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '45%' : hoveredSide === 'left' ? '55%' : '50%'
           }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           onMouseEnter={() => setHoveredSide('left')}
           onMouseLeave={() => setHoveredSide(null)}
-          style={{ backgroundColor: '#93A785' }}
+          style={{ background: 'linear-gradient(to right, #93A785 0%, #E8EBE4 60%, #FAF9F6 100%)' }}
         >
+          {/* Plant Decoration */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-60 z-0 flex items-end justify-start pb-0 pl-0">
+            <img src="/images/plant-vase.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-left-bottom" />
+          </div>
+          
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
           
           <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:mr-24 transition-transform duration-500 group-hover:scale-105">
@@ -89,22 +94,21 @@ export default function Home() {
 
         {/* Right Side: Natural Dental (Teal) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-gradient-to-b from-white via-[#E6F7F6] to-[#62C8C1]"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '55%' : hoveredSide === 'left' ? '45%' : '50%'
           }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           onMouseEnter={() => setHoveredSide('right')}
           onMouseLeave={() => setHoveredSide(null)}
+          style={{ background: 'linear-gradient(to right, #FAF9F6 0%, #E6F7F6 40%, #62C8C1 100%)' }}
         >
-          {/* Organic SVG Divider for Desktop */}
-          <div className="hidden md:block absolute top-0 -left-1 w-24 h-full text-[#93A785]">
-            <svg preserveAspectRatio="none" viewBox="0 0 100 100" className="w-full h-full fill-current">
-              <path d="M0,0 Q50,50 0,100 Z" />
-            </svg>
+          {/* Plant Decoration (Flipped) */}
+          <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-60 z-0 flex items-end justify-end pb-0 pr-0">
+            <img src="/images/plant-vase.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-right-bottom transform -scale-x-100" />
           </div>
 
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent z-0"></div>
           
           <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:ml-24 transition-transform duration-500 group-hover:scale-105">
             <div className="h-28 md:h-48 mb-3 md:mb-6 relative flex justify-center items-center">
@@ -171,7 +175,7 @@ export default function Home() {
                <Link to="/contacto" className="bg-gradient-to-b from-[#40c4b6] to-[#25a598] hover:to-[#209488] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(40,196,182,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
                  <Calendar size={18} strokeWidth={2.5} /> Agendar cita
                </Link>
-               <Link to="/contacto" className="bg-gradient-to-b from-[#35d05e] to-[#25ad46] hover:to-[#1e953a] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
+               <Link to="/contacto" className="bg-gradient-to-b from-[#4A6051] to-[#2D4A3E] hover:to-[#1A3A3A] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(45,74,62,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
                  <MessageCircle size={18} strokeWidth={2.5} /> WhatsApp
                </Link>
              </div>
