@@ -15,8 +15,12 @@ export default function Home() {
         description="Natural Dental y Bio in Dent, tu clínica de odontología biológica y ortodoncia en CDMX. Protegemos tu salud sistémica con materiales biocompatibles y tratamientos avanzados."
       />
       {/* Desktop Split Hero Section (Hidden on mobile) */}
-      <section className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0">
-        
+      <section 
+        className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0 transition-colors duration-700"
+        style={{ 
+          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #62C8C1 100%)` 
+        }}
+      >
         {/* Top Center Content (Headline) */}
         <div className="absolute top-8 md:top-12 left-0 right-0 flex flex-col items-center justify-center z-30 pointer-events-none px-4">
           <motion.div 
@@ -60,14 +64,13 @@ export default function Home() {
 
         {/* Left Side: Bio in Dent (Green) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-transparent"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '45%' : hoveredSide === 'left' ? '55%' : '50%'
           }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           onMouseEnter={() => setHoveredSide('left')}
           onMouseLeave={() => setHoveredSide(null)}
-          style={{ background: 'linear-gradient(to right, #93A785 0%, #E8EBE4 60%, #FAF9F6 100%)' }}
         >
           {/* Plant Decoration */}
           <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-60 z-0 flex items-end justify-start pb-0 pl-0">
@@ -94,14 +97,13 @@ export default function Home() {
 
         {/* Right Side: Natural Dental (Teal) */}
         <motion.div
-          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group"
+          className="relative h-1/2 md:h-full flex flex-col items-center justify-center p-8 cursor-pointer group bg-transparent"
           animate={{
             width: window.innerWidth < 768 ? '100%' : hoveredSide === 'right' ? '55%' : hoveredSide === 'left' ? '45%' : '50%'
           }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           onMouseEnter={() => setHoveredSide('right')}
           onMouseLeave={() => setHoveredSide(null)}
-          style={{ background: 'linear-gradient(to right, #FAF9F6 0%, #E6F7F6 40%, #62C8C1 100%)' }}
         >
           {/* Plant Decoration (Flipped) */}
           <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-60 z-0 flex items-end justify-end pb-0 pr-0">
