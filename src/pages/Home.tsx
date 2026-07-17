@@ -124,11 +124,11 @@ export default function Home() {
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
             </div>
-            <h2 className="text-3xl md:text-6xl font-serif font-bold mb-1 md:mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#0D9488] to-[#65A30D]">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold mb-1 md:mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#0891B2] via-[#0891B2] via-[55%] to-[#7DB81B]">
               Natural Dental
             </h2>
-            <p className="text-[#0D9488] font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
-            <p className="text-[#0D9488]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Odontología Integral y Ortodoncia</p>
+            <p className="text-[#0891B2] font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
+            <p className="text-[#0891B2]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Odontología Integral y Ortodoncia</p>
             
             <Link to="/natural-dental" className="inline-flex items-center gap-2 bg-[#F0FAFA] text-[#1A3A3A] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
