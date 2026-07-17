@@ -49,7 +49,7 @@ export default function Home() {
               <Link to="/contacto" className="bg-[#93A785] hover:bg-[#7d906e] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <Calendar size={18} /> Agendar cita
               </Link>
-              <Link to="/contacto" className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
+              <Link to="/contacto" className="bg-[#0CA4A5] hover:bg-[#0891B2] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <MessageCircle size={18} /> WhatsApp
               </Link>
             </div>
@@ -184,9 +184,9 @@ export default function Home() {
                <Link to="/contacto" className="bg-gradient-to-b from-[#40c4b6] to-[#25a598] hover:to-[#209488] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(40,196,182,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
                  <Calendar size={18} strokeWidth={2.5} /> Agendar cita
                </Link>
-               <Link to="/contacto" className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
-                 <MessageCircle size={18} strokeWidth={2.5} /> WhatsApp
-               </Link>
+                <Link to="/contacto" className="bg-[#0CA4A5] hover:bg-[#0891B2] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(12,164,165,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
+                  <MessageCircle size={18} strokeWidth={2.5} /> WhatsApp
+                </Link>
              </div>
            </motion.div>
         </div>
