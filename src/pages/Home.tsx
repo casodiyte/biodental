@@ -49,7 +49,7 @@ export default function Home() {
               <Link to="/contacto" className="bg-[#93A785] hover:bg-[#7d906e] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <Calendar size={18} /> Agendar cita
               </Link>
-              <Link to="/contacto" className="bg-[#2D4A3E] hover:bg-[#1A3A3A] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
+              <Link to="/contacto" className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-sm">
                 <MessageCircle size={18} /> WhatsApp
               </Link>
             </div>
@@ -124,11 +124,11 @@ export default function Home() {
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10" />
             </div>
-            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#1A3A3A] mb-1 md:mb-2">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#62C8C1] mb-1 md:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
               Natural Dental
             </h2>
-            <p className="text-[#2D4A3E] font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
-            <p className="text-[#1A3A3A]/80 text-xs md:text-sm mb-4 md:mb-6 max-w-xs">Odontología Integral y Ortodoncia</p>
+            <p className="text-[#62C8C1] font-medium text-sm md:text-lg mb-0.5 md:mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">C.D.E.O Lorena Arellano Rosales</p>
+            <p className="text-[#62C8C1]/90 text-xs md:text-sm mb-4 md:mb-6 max-w-xs drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">Odontología Integral y Ortodoncia</p>
             
             <Link to="/natural-dental" className="inline-flex items-center gap-2 bg-[#F0FAFA] text-[#1A3A3A] px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors">
               Conocer más <ArrowRight size={18} />
@@ -184,7 +184,7 @@ export default function Home() {
                <Link to="/contacto" className="bg-gradient-to-b from-[#40c4b6] to-[#25a598] hover:to-[#209488] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(40,196,182,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
                  <Calendar size={18} strokeWidth={2.5} /> Agendar cita
                </Link>
-               <Link to="/contacto" className="bg-gradient-to-b from-[#4A6051] to-[#2D4A3E] hover:to-[#1A3A3A] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(45,74,62,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
+               <Link to="/contacto" className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3.5 rounded-3xl font-bold transition-all shadow-[0_4px_14px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 text-[15px] w-full border border-white/20">
                  <MessageCircle size={18} strokeWidth={2.5} /> WhatsApp
                </Link>
              </div>
