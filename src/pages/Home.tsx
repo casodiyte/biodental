@@ -18,7 +18,7 @@ export default function Home() {
       <section 
         className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0 transition-colors duration-700"
         style={{ 
-          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #62C8C1 100%)` 
+          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #90DCD6 100%)` 
         }}
       >
         {/* Top Center Content (Headline) */}
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent z-0"></div>
           
           <div className="z-10 text-center flex flex-col items-center mt-32 md:mt-28 md:ml-24 transition-transform duration-500 group-hover:scale-105 relative">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-black/10 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/20 blur-3xl rounded-full -z-10 pointer-events-none"></div>
 
             <div className="h-28 md:h-48 mb-3 md:mb-6 relative flex justify-center items-center">
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
