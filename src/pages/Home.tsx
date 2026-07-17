@@ -73,8 +73,8 @@ export default function Home() {
           onMouseLeave={() => setHoveredSide(null)}
         >
           {/* Plant Decoration */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-60 z-0 flex items-end justify-start pb-0 pl-0">
-            <img src="/images/bg-hero.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-left-bottom" />
+          <div className="absolute top-1/2 -translate-y-1/2 -left-20 md:-left-24 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-start pb-0 pl-0">
+            <img src="/images/plant-edge.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-left-bottom" />
           </div>
           
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
@@ -106,8 +106,8 @@ export default function Home() {
           onMouseLeave={() => setHoveredSide(null)}
         >
           {/* Plant Decoration (Flipped) */}
-          <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-60 z-0 flex items-end justify-end pb-0 pr-0">
-            <img src="/images/bg-hero.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-right-bottom transform -scale-x-100" />
+          <div className="absolute top-1/2 -translate-y-1/2 -right-20 md:-right-24 w-[55%] md:w-[65%] h-full pointer-events-none mix-blend-multiply opacity-80 z-0 flex items-end justify-end pb-0 pr-0">
+            <img src="/images/plant-edge.png" alt="" className="w-full h-auto max-h-[110%] object-contain object-right-bottom transform -scale-x-100" />
           </div>
 
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent z-0"></div>
