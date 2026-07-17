@@ -124,7 +124,7 @@ export default function Home() {
               <div className="absolute -translate-y-4 md:-translate-y-6 w-32 h-32 md:w-48 md:h-48 bg-white/80 blur-xl md:blur-2xl rounded-full z-0"></div>
               <img src="/logos/natural-logo.png" alt="Natural Dental Logo" className="h-full w-auto object-contain relative z-10 saturate-150 contrast-125" />
             </div>
-            <h2 className="text-3xl md:text-6xl font-serif font-bold text-[#0CA4A5] mb-1 md:mb-2">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold mb-1 md:mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#7DB81B] via-[#0CA4A5] via-[60%] to-[#0CA4A5]">
               Natural Dental
             </h2>
             <p className="text-[#0CA4A5] font-medium text-sm md:text-lg mb-0.5 md:mb-1">C.D.E.O Lorena Arellano Rosales</p>
