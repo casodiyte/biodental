@@ -18,7 +18,7 @@ export default function Home() {
       <section 
         className="hidden md:flex relative w-full h-screen flex-row overflow-hidden pt-0 transition-colors duration-700"
         style={{ 
-          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #FFFFFF 100%)` 
+          background: `linear-gradient(to right, #879b79 0%, #FAF9F6 ${hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%'}, #CCF0F0 100%)` 
         }}
       >
         {/* Top Center Content (Headline) */}
